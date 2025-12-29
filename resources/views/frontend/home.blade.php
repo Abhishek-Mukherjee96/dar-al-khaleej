@@ -1,0 +1,495 @@
+@extends('frontend.layouts.app')
+@section('title', 'Home')
+@section('content')
+<section class="banner">
+    <div class="owl-carousel" id="banner-slider">
+        <div class="item">
+            <img src="frontend/assets/images/banner-img.png" alt="">
+            <div class="bnDesc">
+                <div class="cus-container">
+                    <div class="text">
+                        <h1>Luxury Furniture Rentals for Homes & Events Across the Gulf</h1>
+                        <p>Premium furniture delivered and installed with flexible monthly plans for convenience.</p>
+                        <a href="#">Browse Furniture</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="frontend/assets/images/banner-img.png" alt="">
+            <div class="bnDesc">
+                <div class="cus-container">
+                    <div class="text">
+                        <h1>Luxury Furniture Rentals for Homes & Events Across the Gulf</h1>
+                        <p>Premium furniture delivered and installed with flexible monthly plans for convenience.</p>
+                        <a href="#">Browse Furniture</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="furniture-sec">
+    <div class="counterSec">
+        <div class="cus-container">
+            <div class="counterBox">
+                <ul id="counter">
+                    <li>
+                        <h6><span class="count percent" data-count="7">0</span></h6>
+                        <p>Year Experience</p>
+                    </li>
+                    <li>
+                        <h6><span class="count percent" data-count="2">0</span></h6>
+                        <p>Opened in the country</p>
+                    </li>
+                    <li>
+                        <h6><span class="count percent" data-count="10">0</span>k+</h6>
+                        <p>Happy Clints</p>
+                    </li>
+                    <li>
+                        <h6><span class="count percent" data-count="260">0</span>+</h6>
+                        <p>Variant Furniture</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="common-slider">
+        <div class="common-sliderWrap">
+            <div class="row g-0 align-items-center">
+                <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
+                    <div class="fsliderdesc">
+                        <h2>Browse Furniture Rentals</h2>
+                        <p>Premium furniture rentals for homes, offices, and events — delivered and set up for you.</p>
+                        <a href="#">View All</a>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
+                    <div class="boxslider">
+                        <div class="owl-carousel" id="furnitureSlider">
+                            <div class="item">
+                                <div class="furnitureBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/furniture-img1.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Home Furniture Rental</p>
+                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="furnitureBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/furniture-img2.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Home Furniture Rental</p>
+                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="furnitureBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/furniture-img3.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Home Furniture Rental</p>
+                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="furnitureBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/furniture-img3.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Home Furniture Rental</p>
+                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="allproduct-sec">
+    <div class="cus-container">
+        <div class="ttl">
+            <h2>All Product</h2>
+            <p>The products we provide only for you as our service are selected from the best products with number 1 quality in the world</p>
+        </div>
+        <div class="productTab">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">All Furniture</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Bedroom</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Living Room</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="homeOffice-tab" data-bs-toggle="tab" data-bs-target="#homeOffice" type="button" role="tab" aria-controls="homeOffice" aria-selected="false">Home Office</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="dining-tab" data-bs-toggle="tab" data-bs-target="#dining" type="button" role="tab" aria-controls="dining" aria-selected="false">Dining Table</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="more-tab" data-bs-toggle="tab" data-bs-target="#more" type="button" role="tab" aria-controls="more" aria-selected="false">More</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <a href="#">
+                                <div class="tabProBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/all-pro-img1.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Ceiling Light</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <a href="#">
+                                <div class="tabProBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/all-pro-img2.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Wood Chair</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <a href="#">
+                                <div class="tabProBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/all-pro-img3.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Papper Cupboard</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <a href="#">
+                                <div class="tabProBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/all-pro-img4.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Ole Gundorse Spring...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <a href="#">
+                                <div class="tabProBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/all-pro-img5.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Treos Seroes 911</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <a href="#">
+                                <div class="tabProBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/all-pro-img6.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Multi bilderman slibber...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <a href="#">
+                                <div class="tabProBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/all-pro-img7.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>XORA corner desk</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <a href="#">
+                                <div class="tabProBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/all-pro-img8.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Black Forest Series wo...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">b</div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">c</div>
+                <div class="tab-pane fade" id="homeOffice" role="tabpanel" aria-labelledby="homeOffice-tab">d</div>
+                <div class="tab-pane fade" id="dining" role="tabpanel" aria-labelledby="dining-tab">e</div>
+                <div class="tab-pane fade" id="more" role="tabpanel" aria-labelledby="more-tab">f</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rental-service-sec">
+    <div class="rental-serviceWrap">
+        <div class="cus-container">
+            <div class="ttl">
+                <h2>How Our Rental Service Works</h2>
+                <p>Simple, fast, and hassle-free furniture rental for homes, offices, and events.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="rental-serviceBox">
+                        <h4>Choose Your Furniture</h4>
+                        <h2>01</h2>
+                        <p>Browse our collections and pick the items or setups you need. We offer home, office, event, and majlis rentals.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="rental-serviceBox">
+                        <h4>Select Your Rental Duration</h4>
+                        <h2>02</h2>
+                        <p>Choose flexible rental terms — daily, weekly, or monthly depending on your needs. No long-term commitments.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="rental-serviceBox">
+                        <h4>Delivery, Setup & Pickup</h4>
+                        <h2>03</h2>
+                        <p>Our team delivers, installs, and arranges everything for you. When your rental period ends, we collect it at your convenience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-sec text-center">
+                <a href="#" class="btn">Request A Quote</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="project-sec">
+    <div class="cus-container">
+        <div class="ttl">
+            <h2>Our Projects</h2>
+            <p>A showcase of premium furniture rentals delivered and installed for homes, offices, events, and majlis setups across the Gulf.</p>
+        </div>
+    </div>
+    <div class="masonry">
+        <div class="brick">
+            <img src="frontend/assets/images/project-img1.png" alt="">
+            <div class="brickBtn">
+                <a href="#">KNOW MORE</a>
+            </div>
+        </div>
+        <div class="brick">
+            <img src="frontend/assets/images/project-img2.png" alt="">
+            <div class="brickBtn">
+                <a href="#">KNOW MORE</a>
+            </div>
+        </div>
+        <div class="brick">
+            <img src="frontend/assets/images/project-img3.png" alt="">
+            <div class="brickBtn">
+                <a href="#">KNOW MORE</a>
+            </div>
+        </div>
+        <div class="brick">
+            <img src="frontend/assets/images/project-img4.png" alt="">
+            <div class="brickBtn">
+                <a href="#">KNOW MORE</a>
+            </div>
+        </div>
+        <div class="brick">
+            <img src="frontend/assets/images/project-img5.png" alt="">
+            <div class="brickBtn">
+                <a href="#">KNOW MORE</a>
+            </div>
+        </div>
+        <div class="brick">
+            <img src="frontend/assets/images/project-img6.png" alt="">
+            <div class="brickBtn">
+                <a href="#">KNOW MORE</a>
+            </div>
+        </div>
+        <div class="brick">
+            <img src="frontend/assets/images/project-img7.png" alt="">
+            <div class="brickBtn">
+                <a href="#">KNOW MORE</a>
+            </div>
+        </div>
+        <div class="brick">
+            <img src="frontend/assets/images/project-img8.png" alt="">
+            <div class="brickBtn">
+                <a href="#">KNOW MORE</a>
+            </div>
+        </div>
+        <div class="brick">
+            <img src="frontend/assets/images/project-img9.png" alt="">
+            <div class="brickBtn">
+                <a href="#">KNOW MORE</a>
+            </div>
+        </div>
+        <div class="brick">
+            <img src="frontend/assets/images/project-img10.png" alt="">
+            <div class="brickBtn">
+                <a href="#">KNOW MORE</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="testimonial-sec">
+    <div class="owl-carousel" id="testimonialSlider">
+        <div class="item">
+            <div class="testimonialBox">
+                <div class="test-iconTop">
+                    <img src="frontend/assets/images/testi-top-icon.png" alt="">
+                </div>
+                <div class="testimonialBoxWrap">
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                    </ul>
+                    <p>Absolutely outstanding service! The team delivered, installed, and set up every piece with perfection. My entire living room was transformed into a luxurious space within hours. I highly recommend DAR AL KHALEEJ to anyone looking for top-quality premium rental furniture.</p>
+                    <h4>Andrés R</h4>
+                </div>
+                <div class="test-iconBottom">
+                    <img src="frontend/assets/images/testi-bottom-icon.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="testimonialBox">
+                <div class="test-iconTop">
+                    <img src="frontend/assets/images/testi-top-icon.png" alt="">
+                </div>
+                <div class="testimonialBoxWrap">
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                    </ul>
+                    <p>Absolutely outstanding service! The team delivered, installed, and set up every piece with perfection. My entire living room was transformed into a luxurious space within hours. I highly recommend DAR AL KHALEEJ to anyone looking for top-quality premium rental furniture.</p>
+                    <h4>Andrés R</h4>
+                </div>
+                <div class="test-iconBottom">
+                    <img src="frontend/assets/images/testi-bottom-icon.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="testimonialBox">
+                <div class="test-iconTop">
+                    <img src="frontend/assets/images/testi-top-icon.png" alt="">
+                </div>
+                <div class="testimonialBoxWrap">
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                    </ul>
+                    <p>Absolutely outstanding service! The team delivered, installed, and set up every piece with perfection. My entire living room was transformed into a luxurious space within hours. I highly recommend DAR AL KHALEEJ to anyone looking for top-quality premium rental furniture.</p>
+                    <h4>Andrés R</h4>
+                </div>
+                <div class="test-iconBottom">
+                    <img src="frontend/assets/images/testi-bottom-icon.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ourBlog-sec">
+    <div class="common-slider">
+        <div class="common-sliderWrap">
+            <div class="row g-0 align-items-center">
+                <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
+                    <div class="fsliderdesc">
+                        <h2>From Our Blog</h2>
+                        <p>Insights, tips, and ideas on furniture rentals, interior styling, events, and majlis setups.</p>
+                        <a href="#">Explore More</a>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
+                    <div class="boxslider">
+                        <div class="owl-carousel" id="blogSlider">
+                            <div class="item">
+                                <div class="blogBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/blog-img1.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <div class="info">
+                                            <span>11 Nov 2025</span>
+                                            <p>Reasons to Rent Furniture Instead of Buying in the UAE</p>
+                                        </div>
+                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="blogBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/blog-img2.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <div class="info">
+                                            <span>11 Nov 2025</span>
+                                            <p>How to Style Your Living Room with Premium Rental Furniture</p>
+                                        </div>
+                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="blogBox">
+                                    <div class="imgtham">
+                                        <img src="frontend/assets/images/blog-img2.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <div class="info">
+                                            <span>11 Nov 2025</span>
+                                            <p>Reasons to Rent Furniture Instead of Buying in the UAE</p>
+                                        </div>
+                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
