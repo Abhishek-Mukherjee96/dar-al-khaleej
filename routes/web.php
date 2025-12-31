@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RiskRegisterController;
@@ -22,6 +23,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/business/{business}/approve', [BusinessController::class, 'business_approve'])->name('business_approve');
     Route::post('/business/{business}/reject', [BusinessController::class, 'business_reject'])->name('business_reject');
     Route::get('/business-list-filter', [BusinessController::class, 'business_list_filter'])->name('business_list_filter');
+
+
+    Route::get('category-list', [AdminController::class, 'category_list'])->name('category_list');
+
 });
 
 Route::group(['middleware' => 'guest'], function () {

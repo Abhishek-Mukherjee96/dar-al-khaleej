@@ -71,28 +71,17 @@
                         </div>
                     </a>
                 </li>
-                {{--<li>
-                    <a class="nav-link {{ request()->is('business-list') ? 'active' : '' }} || {{ request()->is('edit-business/*') ? 'active' : '' }}"
-                        href="{{ route('business_list') }}" role="button">
+                <li>
+                    <a class="nav-link {{ request()->is('category-list') ? 'active' : '' }} ? 'active' : '' }}"
+                        href="{{ route('category_list') }}" role="button">
                         <div class="d-flex align-items-center">
                             <span class="nav-link-icon">
                                 <span class="bi-shield-lock"></span>
                             </span>
-                            <span class="nav-link-text ps-1">Business Listing</span>
+                            <span class="nav-link-text ps-1">Category</span>
                         </div>
                     </a>
                 </li>
-                <li>
-                    <a class="nav-link {{ request()->is('old-business-list') ? 'active' : '' }} || {{ request()->is('edit-old-business/*') ? 'active' : '' }}"
-                        href="{{ route('old_business_list') }}" role="button">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon">
-                                <span class="bi-shield-lock"></span>
-                            </span>
-                            <span class="nav-link-text ps-1">Old Business</span>
-                        </div>
-                    </a>
-                </li>--}}
             </ul>
         </div>
     </div>
