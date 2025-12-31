@@ -6,11 +6,11 @@ if (!function_exists('status_badge')) {
         switch ($status) {
             case 1:
                 $class = 'badge badge rounded-pill d-block p-2 badge-subtle-success border border-success';
-                $text = 'Verified';
+                $text = 'Active';
                 break;
             case 0:
                 $class = 'badge badge rounded-pill d-block p-2 badge-subtle-warning border border-warning';
-                $text = 'Pending';
+                $text = 'Inactive';
                 break;
             case 2:
                 $class = 'badge badge rounded-pill d-block p-2 badge-subtle-danger border border-danger';

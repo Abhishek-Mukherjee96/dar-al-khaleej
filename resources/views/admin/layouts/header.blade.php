@@ -96,6 +96,7 @@
         }
     </style>
     <link href="/assets/css/custom.css" rel="stylesheet">
+    @livewireStyles
 </head>
 
 <div class="overlay" id="overlay" style="display: none;">

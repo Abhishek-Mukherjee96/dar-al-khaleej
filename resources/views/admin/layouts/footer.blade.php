@@ -327,6 +327,7 @@
     });
 </script>
 @yield('scripts')
+@livewireScripts
 @stack('scripts')
 </body>
 
