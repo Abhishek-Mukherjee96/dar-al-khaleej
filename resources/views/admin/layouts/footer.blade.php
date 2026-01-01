@@ -40,7 +40,7 @@
     <div class="row g-0 justify-content-between fs-10 mt-4 mb-3">
         <div class="col-12 col-sm-auto text-center">
             <p class="mb-0 text-600">Developed By <span class="d-none d-sm-inline-block">
-                </span><a href="javascript:void(0);" target="_blank">Abhishek</a></p>
+                </span><a href="https://stitwebsolutions.com" target="_blank">Streamertail web solutions</a></p>
         </div>
         <div class="col-12 col-sm-auto text-center">
             <p class="mb-0 text-600">

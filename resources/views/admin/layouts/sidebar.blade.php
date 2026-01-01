@@ -72,13 +72,23 @@
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link {{ request()->is('category-list') ? 'active' : '' }} ? 'active' : '' }}"
+                    <a class="nav-link {{ request()->is('category') ? 'active' : '' }} ? 'active' : '' }}"
                         href="{{ route('category_list') }}" role="button">
                         <div class="d-flex align-items-center">
                             <span class="nav-link-icon">
                                 <span class="bi-shield-lock"></span>
                             </span>
                             <span class="nav-link-text ps-1">Category</span>
+                        </div>
+                    </a>
+                <li>
+                    <a class="nav-link {{ request()->is('product') ? 'active' : '' }} ? 'active' : '' }}"
+                        href="{{ route('product_list') }}" role="button">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon">
+                                <span class="bi-shield-lock"></span>
+                            </span>
+                            <span class="nav-link-text ps-1">Product</span>
                         </div>
                     </a>
                 </li>

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->bigIncrements('product_id');
             $table->unsignedBigInteger('category_id');
             $table->string('product_name');
+            $table->string('thumbnail');
             $table->string('slug')->unique();
             $table->text('description');
             $table->integer('status')->default(1);

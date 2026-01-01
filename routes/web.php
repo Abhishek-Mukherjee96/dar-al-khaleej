@@ -25,7 +25,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/business-list-filter', [BusinessController::class, 'business_list_filter'])->name('business_list_filter');
 
 
-    Route::get('category-list', [AdminController::class, 'category_list'])->name('category_list');
+    Route::get('category', [AdminController::class, 'category_list'])->name('category_list');
+    Route::get('product', [AdminController::class, 'product_list'])->name('product_list');
 
 });
 
