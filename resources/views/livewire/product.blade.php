@@ -1,4 +1,5 @@
 <div>
+    <x-flash />
     @if(!$showForm)
     <div class="card mt-2">
         <div class="card-header">
@@ -102,6 +103,7 @@
                         <label>Gallery Images</label>
                         <input type="file" wire:model.live="gallery" multiple class="form-control">
                         @if ($gallery)
+                        <strong>Preview:</strong><br>
                         <div class="mt-2 d-flex gap-2">
                             @foreach ($gallery as $img)
                             <img src="{{ $img->temporaryUrl() }}" width="80">

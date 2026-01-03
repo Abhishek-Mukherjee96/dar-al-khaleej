@@ -11,12 +11,12 @@
     <title>Dar Al Khaleej</title>
 
     <!-- ===============================================--><!--    Favicons--><!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/spot-illustrations/wwd.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/spot-illustrations/wwd.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/spot-illustrations/wwd.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/icons/spot-illustrations/wwd.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="frontend/assets/images/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="frontend/assets/images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="frontend/assets/images/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="frontend/assets/images/logo.png">
     <link rel="manifest" href="/assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="/assets/img/icons/spot-illustrations/wwd.png">
+    <meta name="msapplication-TileImage" content="frontend/assets/images/logo.png">
     <meta name="theme-color" content="#ffffff">
     <script src="/assets/js/config.js"></script>
     <script src="/assets/vendors/simplebar/simplebar.min.js"></script>

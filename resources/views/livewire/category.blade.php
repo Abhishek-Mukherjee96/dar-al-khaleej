@@ -1,4 +1,5 @@
 <div>
+    <x-flash />
     @if(!$showForm)
     <div class="card mt-2">
         <div class="card-header">

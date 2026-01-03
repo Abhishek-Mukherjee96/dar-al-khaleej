@@ -4,6 +4,8 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Category as CategoryModel;
+use App\Models\Gallery;
+use App\Models\Product;
 use Illuminate\Support\Str;
 
 class Category extends Component
@@ -104,6 +106,8 @@ class Category extends Component
     public function delete($id)
     {
         CategoryModel::findOrFail($id)->delete();
+        Product::where('category_id', $id)->delete();
+        session()->flash('success', 'Category and its products deleted successfully.');
         $this->loadCategories();
     }
 

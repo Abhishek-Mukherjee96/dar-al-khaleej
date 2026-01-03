@@ -16,10 +16,10 @@
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/spot-illustrations/wwd.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/spot-illustrations/wwd.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/spot-illustrations/wwd.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/icons/spot-illustrations/wwd.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="frontend/assets/images/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="frontend/assets/images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="frontend/assets/images/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="frontend/assets/images/logo.png">
     <link rel="manifest" href="/assets/img/favicons/manifest.json">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
 

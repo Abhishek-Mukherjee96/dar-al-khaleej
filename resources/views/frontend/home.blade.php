@@ -127,131 +127,39 @@
         <div class="productTab">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">All Furniture</button>
+                    <button class="nav-link active"
+                        data-bs-toggle="tab"
+                        data-bs-target="#all">
+                        All Furniture
+                    </button>
                 </li>
+                @foreach($categories as $category)
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Bedroom</button>
+                    <button class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#cat-{{ $category->category_id }}">
+                        {{ $category->cat_name }}
+                    </button>
                 </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Living Room</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="homeOffice-tab" data-bs-toggle="tab" data-bs-target="#homeOffice" type="button" role="tab" aria-controls="homeOffice" aria-selected="false">Home Office</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="dining-tab" data-bs-toggle="tab" data-bs-target="#dining" type="button" role="tab" aria-controls="dining" aria-selected="false">Dining Table</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="more-tab" data-bs-toggle="tab" data-bs-target="#more" type="button" role="tab" aria-controls="more" aria-selected="false">More</button>
-                </li>
+                @endforeach
             </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="all">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <a href="#">
-                                <div class="tabProBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/all-pro-img1.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <p>Ceiling Light</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <a href="#">
-                                <div class="tabProBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/all-pro-img2.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <p>Wood Chair</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <a href="#">
-                                <div class="tabProBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/all-pro-img3.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <p>Papper Cupboard</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <a href="#">
-                                <div class="tabProBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/all-pro-img4.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <p>Ole Gundorse Spring...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <a href="#">
-                                <div class="tabProBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/all-pro-img5.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <p>Treos Seroes 911</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <a href="#">
-                                <div class="tabProBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/all-pro-img6.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <p>Multi bilderman slibber...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <a href="#">
-                                <div class="tabProBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/all-pro-img7.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <p>XORA corner desk</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <a href="#">
-                                <div class="tabProBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/all-pro-img8.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <p>Black Forest Series wo...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        @foreach($products as $product)
+                        @include('frontend.partials.product-card', ['product' => $product])
+                        @endforeach
                     </div>
                 </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">b</div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">c</div>
-                <div class="tab-pane fade" id="homeOffice" role="tabpanel" aria-labelledby="homeOffice-tab">d</div>
-                <div class="tab-pane fade" id="dining" role="tabpanel" aria-labelledby="dining-tab">e</div>
-                <div class="tab-pane fade" id="more" role="tabpanel" aria-labelledby="more-tab">f</div>
+                @foreach($categories as $category)
+                <div class="tab-pane fade" id="cat-{{ $category->category_id }}">
+                    <div class="row">
+                        @foreach($category->products as $product)
+                        @include('frontend.partials.product-card', ['product' => $product])
+                        @endforeach
+                    </div>
+                </div>
+                @endforeach
             </div>
         </div>
     </div>

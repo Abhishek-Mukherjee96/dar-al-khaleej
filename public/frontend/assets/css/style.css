@@ -712,8 +712,9 @@ img{
 }
 
 .footer{
-    padding: 100px 0 0;
+    padding: 60px 0 0;
     margin: 0;
+    border-top: 1px solid #f2f2f2;
 }
 .footer .specialBox{
     padding: 40px 0 0;
@@ -1054,13 +1055,13 @@ img{
     bottom: 100px;
     right: 20px;
     border-radius: 50%;
-    background-color: #FFCE00;
+    background-color: #B88E2F;
     color: #fff;
     z-index: 999;
     width: 40px;
     text-align: center;
     height: 40px;
-    border: 1px solid #FFCE00;
+    border: 1px solid #B88E2F;
     opacity: 0;
     visibility: hidden;
     font-size: 15px;
@@ -1082,3 +1083,598 @@ img{
     -webkit-animation: top-bottom 5s infinite linear;
     animation: top-bottom 5s infinite linear;
 }
+
+
+
+.bannerInnerWrap{
+    padding: 0 15px;
+}
+
+.bannerInner{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border-radius: 100px;
+    overflow: hidden;
+}
+.bannerInner img{
+    width: 100%;
+    height: auto;
+}
+.bannerInner::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(42, 22, 5, 0) 0%, #2A1605 100%);
+    z-index: 1;
+}
+.bannerInner .desc{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+}
+.bannerInner .desc .text{
+    text-align: center;
+}
+
+.bannerInner .desc .text h1 {
+    font-family: "Imbue", serif;
+    font-weight: 600;
+    font-size: 64px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.aboutSec{
+    padding:40px 0;
+    margin: 0;
+}
+
+.aboutSec .aboutImg{
+    padding: 0;
+    margin: 0;
+}
+
+.aboutSec .aboutImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.aboutSec .textBox{
+    padding: 0;
+    margin: 0;
+}
+.aboutSec .textBox h2{
+    margin-bottom: 30px;
+}
+.aboutSec .textBox p{
+    margin-bottom: 15px;
+}
+.siteTtl{
+    font-family: "Imbue", serif;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    color: #1D364D;
+}
+.sitePara{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #23262F;
+}
+
+
+
+.siteTtlsm{
+    font-family: "Imbue", serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    color: #1D364D;
+}
+.siteParasm{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #23262F;
+}
+
+.imgTextPanel{
+    padding: 40px 0;
+    margin: 0;
+}
+.imgTextPanel .row:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.imgTextPanel .aboutImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgTextPanel .textBox {
+    padding: 0 20px 0 0;
+    margin: 0;
+}
+.imgTextPanel .textBox h3{
+    margin-bottom: 30px;
+}
+.imgTextPanel .textBox p{
+    margin-bottom: 15px;
+}
+.imgTextPanel .row:nth-child(even) .textBox{
+    padding: 0 0 0 20px;
+}
+
+.videoSection{
+    height: 650px;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+.videoSection iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+.sigTtl{
+    font-family: "Licorice", cursive;
+    font-weight: 400;
+    font-size:40px;
+    line-height:1;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #000;
+    padding: 20px 0 0;
+    margin: 0;
+    text-align: right;
+}
+
+
+
+.contact-page-sec{
+  padding: 50px 0;
+}
+
+
+.about-page-sec{
+  padding: 50px 0;
+  margin: 0;
+}
+.about-page-sec .textBox small{
+  color: #0093ca;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.about-page-sec .textBox h2{
+  margin: 0 0 20px;
+}
+.about-page-sec .textBox p{
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #535353;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+
+
+
+
+
+
+
+.contact-info {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0%;
+  height: 100%;
+}
+.contact-info-icon {
+  margin-bottom: 20px;
+}
+.contact-info-item {
+  background: #BB966A;
+  padding: 30px 0px;
+  border-radius: 15px;
+  height: 100%;
+}
+.contact-page-sec .contact-page-form h2 {
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 28px;
+  font-weight: 700;
+}
+/* .contact-page-form .col-md-6.col-sm-6.col-xs-12 {
+  padding-left: 0;
+}   */
+.contact-page-form.contact-form input {
+  margin-bottom: 5px;
+}  
+.contact-page-form.contact-form textarea {
+  height: 110px;
+}
+/* .contact-page-form.contact-form input[type="submit"] {
+  background: #071c34;
+  width: 150px;
+  border-color: #071c34;
+} */
+.contact-info-icon i {
+  font-size: 48px;
+  color: #1D364D;
+}
+.contact-info-text p{margin-bottom:0px;}
+.contact-info-text h2 {
+    font-family: "Imbue", serif;
+    color: #fff;
+    font-size: 36px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact-info-text span {
+  color: #fff;
+  font-size: 16px;
+  font-weight:500;
+  display: inline-block;
+  width: 100%;
+}
+
+.contact-page-form .form-control {
+  background: none;
+  border: 1px solid #E2E2E2;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+
+}
+
+.contact-page-form .message-input {
+display: inline-block;
+width: 100%;
+padding-left: 0;
+}
+.single-input-field textarea {
+  background: #f9f9f9 none repeat scroll 0 0;
+  border: 1px solid #f9f9f9;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+.single-input-fieldsbtn input[type="submit"] {
+  background: #fda40b none repeat scroll 0 0;
+  color: #fff;
+  display: inline-block;
+  font-weight: 600;
+  padding: 10px 0;
+  text-transform: capitalize;
+  width: 150px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+/* .single-input-fieldsbtn input[type="submit"]:hover{
+  background:#071c34;
+  transition: all 0.4s ease-in-out 0s;
+  border-color:#071c34
+} */
+.single-input-field  h4 {
+  color: #464646;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.contact-page-form {
+  display: inline-block;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.contact-page-map {
+  margin-top: 36px;
+}
+
+.contBtn {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #fff;
+    background: #BB966A;
+    backdrop-filter: blur(30px);
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+    padding: 14px 50px;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+.contBtn:hover{
+    background: #1D364D;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.proSideBar {
+    background: #C2C2C226;
+    border-radius: 33px;
+    padding: 30px;
+}
+.proSideBarBox{
+    padding: 0;
+    margin: 0 0 30px;
+}
+.proSideBarBox:last-child{
+    margin-bottom: 0;
+}
+
+.proSideBarBox h3{
+    font-family: "Imbue", serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    color: #1D364D;
+    padding: 0 0 20px;
+    margin: 0;
+}
+.proSideBarBox ul li{
+    margin: 0 0 10px;
+}
+.proSideBarBox ul li:last-child{
+    margin-bottom: 0;
+}
+.custChekBox{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.custChekBox label{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #23262F;
+    margin: 0;
+}
+
+.proCatSrc{
+    padding: 0;
+    margin: 0  0 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+.proCatSrc .srcWrap{
+    max-width: 660px;
+    width: 100%;
+    position: relative;
+}
+.proCatSrc .srcWrap .form-control{
+    background: #C2C2C226;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 10px;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 8px;
+    min-height: 46px;
+}
+.proCatSrc .srcWrap .srcBtn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1D364D;
+}
+
+
+.productDetails-sec{
+    padding: 50px 0;
+    margin: 0;
+}
+
+.productDetails-sec .proTham{
+    border: 1px solid #1026371A;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.productDetails-sec .proTham img{
+    max-width: 100%;
+}
+
+.productDetails-sec .proInfo h2{
+    font-family: "Imbue", serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    color: #1D364D;
+    padding: 0;
+    margin: 0 0 15px;
+}
+.productDetails-sec .proInfo p{
+    font-family: Quicksand, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #23262F;
+    padding: 0;
+    margin: 0 0 30px;
+}
+.productDetails-sec .proInfo h3{
+    font-family: "Imbue", serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    color: #1D364D;
+    padding: 0;
+    margin: 0 0 15px;
+}
+
+.productDetails-sec .proInfo ul li{
+    font-family: Quicksand, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #23262F;
+    padding: 0;
+    margin: 0 0 10px;
+}
+.productDetails-sec .proInfo h5{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #1D364D;
+    padding: 0;
+    margin: 40px 0 30px;
+}
+.productDetails-sec .proInfo h5 sub{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: lowercase;
+}
+.productDetails-sec .btnPanel{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.productDetails-sec .btnPanel a{
+    display: inline-block;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    letter-spacing: .5px;
+    background: #1D364D;
+    backdrop-filter: blur(30px);
+    padding: 14px 50px;
+    border-radius: 4px;
+    transition: all 300ms ease-in-out;
+}
+.productDetails-sec .btnPanel a:hover{
+    background: #BB966A;
+}
+
+.productDesc {
+    padding: 30px;
+    border: 1px solid #D9D9D9;
+    margin: 60px 0 0;
+    border-radius: 40px;
+    min-height: 450px;
+}
+
+.productDesc .nav-tabs {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    flex-wrap: nowrap;
+}
+
+
+.productDesc .nav-tabs .nav-item .nav-link {
+    border: none;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 33px;
+    background: transparent;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #1D364D;
+    padding: 14px 60px;
+    display: block;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    border: 1px solid #1D364D;
+}
+.productDesc .nav-tabs .nav-item .nav-link:hover {
+    background: #1D364D;
+    color: #fff;
+}
+.productDesc .tab-pane{
+    padding: 30px 0 0;
+}
+
+
+.moreProSec .ttl{
+    text-align: center;
+    padding: 0;
+    margin: 0 0 40px;
+}
+.moreProSec .ttl h2{
+    font-family: "Imbue", serif;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+

@@ -185,4 +185,8 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    'phone' => env('APP_PHONE', ''),
+    'whatsapp' => env('APP_WHATSAPP', ''),
+
+
 ];

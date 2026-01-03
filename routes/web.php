@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BusinessController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RiskRegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,14 +27,20 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/business/{business}/reject', [BusinessController::class, 'business_reject'])->name('business_reject');
     Route::get('/business-list-filter', [BusinessController::class, 'business_list_filter'])->name('business_list_filter');
 
-
     Route::get('category', [AdminController::class, 'category_list'])->name('category_list');
     Route::get('product', [AdminController::class, 'product_list'])->name('product_list');
 
 });
 
+Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/about-us', [AboutController::class, 'about_us'])->name('about_us');
+Route::get('/contact-us', [ContactController::class, 'contact_us'])->name('contact_us');
+Route::get('/products', [ProductController::class, 'products'])->name('products');
+Route::get('/product/{slug}', [ProductController::class, 'product_details'])->name('product_details');
+Route::post('/products/filter', [ProductController::class, 'products_filter'])->name('products_filter');
+
+
 Route::group(['middleware' => 'guest'], function () {
-    Route::get('/', [HomeController::class, 'index'])->name('index');
     Route::get('/admin/login', [AdminAuthController::class, 'admin_login'])->name('login');
     Route::post('/admin-login-action', [AdminAuthController::class, 'admin_login_action'])->name('admin.login.action');
 });

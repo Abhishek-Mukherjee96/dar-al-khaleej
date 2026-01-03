@@ -17,7 +17,7 @@
   }
 
   .common-sliderWrap {
-    max-width: 1350px;
+      max-width: 1350px;
   }
 
   .fsliderdesc h2{
@@ -83,9 +83,32 @@
   .copyrightSec ul li a{
     font-size: 14px;
   }
-  @media screen and (max-width: 1366px){
-    .common-sliderWrap {
-      max-width: 1266px;
-    }
+}
+@media screen and (max-width: 1680px){
+  .siteTtl{
+    font-size:50px;
   }
+  .sitePara{
+    font-size: 18px;
+  }
+
+  .siteTtlsm{
+    font-size: 36px;
+  }
+  .siteParasm{
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1366px){
+  .common-sliderWrap {
+    max-width: 1266px;
+  }
+  .siteTtl{
+    font-size:46px;
+  }
+  .sitePara{
+    font-size: 16px;
+  }
+  
+
 }
