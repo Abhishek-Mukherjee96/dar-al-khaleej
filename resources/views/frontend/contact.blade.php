@@ -61,31 +61,48 @@
             <div class="col-md-6">
                 <div class="contact-page-form" method="post">
                     <h2>Get in Touch</h2>
-                    <form action="contact-mail.php" method="post">
+                    <x-flash />
+                    <form action="{{route('contact_form_action')}}"  method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
                                     <input type="text" placeholder="Your Name" name="name" class="form-control">
+                                    @error('name')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
-                                    <input type="email" placeholder="E-mail" name="email" required="" class="form-control">
+                                    <input type="email" placeholder="E-mail" name="email" class="form-control">
+                                    @error('email')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
                                     <input type="text" placeholder="Phone Number" name="phone" class="form-control">
+                                    @error('phone')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="single-input-field">
                                     <input type="text" placeholder="Subject" name="subject" class="form-control">
+                                    @error('subject')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-md-12 ">
                                 <div class="single-input-field">
                                     <textarea placeholder="Write Your Message" name="message" class="form-control"></textarea>
+                                    @error('message')
+                                    <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-md-12 mt-4">

@@ -8,13 +8,24 @@ use App\Models\Category;
 
 class ProductController extends Controller
 {
-    public function products()
+    public function products(Request $request)
     {
         $categories = Category::where('status', 1)->get();
-        $products = Product::where('status', 1)->latest()->paginate(15);
+
+        $products = Product::where('status', 1)
+            ->when($request->filled('category'), function ($q) use ($request) {
+                $category = Category::where('slug', $request->category)->first();
+
+                if ($category) {
+                    $q->where('category_id', $category->id);
+                }
+            })
+            ->latest()
+            ->paginate(15);
 
         return view('frontend.products', compact('categories', 'products'));
     }
+
 
     // AJAX filter
     public function products_filter(Request $request)

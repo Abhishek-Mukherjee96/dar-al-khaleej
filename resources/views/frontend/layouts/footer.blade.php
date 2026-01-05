@@ -4,18 +4,18 @@
             <div class="col-lg-2 col-md-3 col-sm-12">
                 <div class="ft-logo">
                     <a href="#">
-                        <img src="frontend/assets/images/footer-logo.png" alt="">
+                        <img src="{{asset('frontend/assets/images/footer-logo.png')}}" alt="">
                     </a>
                 </div>
                 <div class="specialBox">
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="frontend/assets/images/facebook.png" alt="">
+                                <img src="{{asset('frontend/assets/images/facebook.png')}}" alt="">
                             </a>
                         </li>
-                        <li><a href="#"><img src="frontend/assets/images/instagram.png" alt=""></a></li>
-                        <li><a href="#"><img src="frontend/assets/images/twitter.png" alt=""></a></li>
+                        <li><a href="#"><img src="{{asset('frontend/assets/images/instagram.png')}}" alt=""></a></li>
+                        <li><a href="#"><img src="{{asset('frontend/assets/images/twitter.png')}}" alt=""></a></li>
                     </ul>
                 </div>
             </div>
@@ -37,11 +37,13 @@
                     <div class="ftBox">
                         <h3 class="ftTtl">Categories</h3>
                         <ul>
-                            <li><a href="#">Home Furniture </a></li>
-                            <li><a href="#">Office Furniture</a></li>
-                            <li><a href="#">Event & Exhibition</a></li>
-                            <li><a href="#">Majlis </a></li>
-                            <li><a href="#">Rental Packages</a></li>
+                            @foreach($footerCategories as $category)
+                            <li>
+                                <a href="{{ route('products') }}?category={{ $category->slug }}">
+                                    {{ $category->cat_name }}
+                                </a>
+                            </li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="ftBox">

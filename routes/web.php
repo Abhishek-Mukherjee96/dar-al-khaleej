@@ -30,11 +30,16 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('category', [AdminController::class, 'category_list'])->name('category_list');
     Route::get('product', [AdminController::class, 'product_list'])->name('product_list');
 
+    Route::get('contacts', [AdminController::class, 'contact_list'])->name('contact_list');
+    Route::get('about-edit', [AdminController::class, 'about_edit'])->name('about_edit');
+    Route::post('about-edit-action', [AdminController::class, 'about_edit_action'])->name('about_edit_action');
+
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/about-us', [AboutController::class, 'about_us'])->name('about_us');
 Route::get('/contact-us', [ContactController::class, 'contact_us'])->name('contact_us');
+Route::post('/contact-us-action', [ContactController::class, 'contact_form_action'])->name('contact_form_action');
 Route::get('/products', [ProductController::class, 'products'])->name('products');
 Route::get('/product/{slug}', [ProductController::class, 'product_details'])->name('product_details');
 Route::post('/products/filter', [ProductController::class, 'products_filter'])->name('products_filter');

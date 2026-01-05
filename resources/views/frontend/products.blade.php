@@ -32,7 +32,11 @@
                             <!-- Categories -->
                             @foreach($categories as $category)
                             <li class="custChekBox">
-                                <input type="checkbox" class="category-filter" value="{{ $category->category_id }}" id="cat-{{ $category->category_id }}">
+                                <input type="checkbox"
+                                    class="category-filter"
+                                    value="{{ $category->category_id }}"
+                                    data-slug="{{ $category->slug }}"
+                                    id="cat-{{ $category->category_id }}">
                                 <label for="cat-{{ $category->category_id }}">{{ $category->cat_name }}</label>
                             </li>
                             @endforeach
@@ -58,57 +62,8 @@
 @endsection
 @section('scripts')
 <script>
-    // $(document).ready(function() {
-    //     function filterProducts() {
-    //         var categories = [];
-    //         $('.category-filter:checked').each(function() {
-    //             if ($(this).val() != '') categories.push($(this).val());
-    //         });
-
-    //         var search = $('#search-box').val();
-
-    //         $.ajax({
-    //             url: "{{ route('products_filter') }}",
-    //             method: "POST",
-    //             data: {
-    //                 _token: "{{ csrf_token() }}",
-    //                 categories: categories,
-    //                 search: search
-    //             },
-    //             success: function(response) {
-    //                 $('#products-container').html(response.html);
-    //             }
-    //         });
-    //     }
-
-    //     // On category change
-    //     $('.category-filter').change(function() {
-    //         // If "All Furniture" checked, uncheck other categories
-    //         if ($(this).attr('id') === 'all') {
-    //             if ($(this).is(':checked')) {
-    //                 $('.category-filter').not(this).prop('checked', false);
-    //             }
-    //         } else {
-    //             // If any category is checked, uncheck "All Furniture"
-    //             if ($(this).is(':checked')) {
-    //                 $('#all').prop('checked', false);
-    //             }
-    //         }
-    //         filterProducts();
-    //     });
-
-    //     // On search keyup with debounce
-    //     var typingTimer;
-    //     $('#search-box').on('keyup', function() {
-    //         clearTimeout(typingTimer);
-    //         typingTimer = setTimeout(filterProducts, 500);
-    //     });
-
-    // });
-
     jQuery(document).ready(function($) {
-
-        var currentPage = 1; // track current page
+        var currentPage = 1;
 
         function filterProducts(page = 1) {
             var categories = [];
@@ -137,15 +92,28 @@
         }
 
         // Category change
-        $('.category-filter').change(function() {
+        // Category change
+        $('.category-filter').on('change', function() {
+
+            // If "All Furniture" is checked
             if ($(this).attr('id') === 'all') {
                 if ($(this).is(':checked')) {
                     $('.category-filter').not(this).prop('checked', false);
                 }
-            } else if ($(this).is(':checked')) {
-                $('#all').prop('checked', false);
             }
-            filterProducts();
+            // If any specific category is checked
+            else {
+                if ($(this).is(':checked')) {
+                    $('#all').prop('checked', false);
+                }
+
+                // If no category is checked, auto-select "All"
+                if ($('.category-filter:not(#all):checked').length === 0) {
+                    $('#all').prop('checked', true);
+                }
+            }
+
+            filterProducts(1);
         });
 
         // Search debounce
@@ -164,6 +132,21 @@
             filterProducts(page);
         });
 
+        // Auto select category from footer URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const categorySlug = urlParams.get('category');
+
+        if (categorySlug) {
+            $('#all').prop('checked', false);
+
+            $('.category-filter').each(function() {
+                if ($(this).data('slug') === categorySlug) {
+                    $(this).prop('checked', true);
+                }
+            });
+
+            filterProducts(1);
+        }
     });
 </script>
 @endsection

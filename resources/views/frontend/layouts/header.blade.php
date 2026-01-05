@@ -2,7 +2,7 @@
     <div class="cus-container">
         <div class="headerwrap">
             <div class="logo">
-                <a href="{{ route('index') }}"><img src="frontend/assets/images/logo.png" alt=""></a>
+                <a href="{{ route('index') }}"><img src="{{asset('frontend/assets/images/logo.png')}}" alt=""></a>
             </div>
             <div class="rthd">
                 <div class="stellarnav">
@@ -18,7 +18,7 @@
                     </ul>
                 </div>
                 <div class="rqBtn">
-                    <a href="#">Request A Quote</a>
+                    <a href="{{ route('contact_us') }}">Request A Quote</a>
                 </div>
             </div>
         </div>

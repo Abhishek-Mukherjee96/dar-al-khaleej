@@ -76,19 +76,42 @@
                         href="{{ route('category_list') }}" role="button">
                         <div class="d-flex align-items-center">
                             <span class="nav-link-icon">
-                                <span class="bi-shield-lock"></span>
+                                <span class="bi-tag"></span>
                             </span>
                             <span class="nav-link-text ps-1">Category</span>
                         </div>
                     </a>
+                </li>
                 <li>
                     <a class="nav-link {{ request()->is('product') ? 'active' : '' }} ? 'active' : '' }}"
                         href="{{ route('product_list') }}" role="button">
                         <div class="d-flex align-items-center">
                             <span class="nav-link-icon">
-                                <span class="bi-shield-lock"></span>
+                                <span class="bi-bag"></span>
                             </span>
                             <span class="nav-link-text ps-1">Product</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link {{ request()->is('about-edit') ? 'active' : '' }} ? 'active' : '' }}"
+                        href="{{ route('about_edit') }}" role="button">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon">
+                                <span class="bi-building"></span>
+                            </span>
+                            <span class="nav-link-text ps-1">About Us</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link {{ request()->is('contacts') ? 'active' : '' }} ? 'active' : '' }}"
+                        href="{{ route('contact_list') }}" role="button">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon">
+                                <span class="bi-person-lines-fill"></span>
+                            </span>
+                            <span class="nav-link-text ps-1">Contacts</span>
                         </div>
                     </a>
                 </li>

@@ -18,15 +18,13 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="aboutImg">
-                    <img src="frontend/assets/images/banner-img.png" alt="">
+                    <img src="{{$about->about_img}}" alt="">
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="textBox">
-                    <h2 class="siteTtl">About Us</h2>
-                    <p class="sitePara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
-                    <p class="sitePara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
-                    <p class="sitePara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
+                    <h2 class="siteTtl">{{$about->about_heading}}</h2>
+                    <p class="sitePara">{!!$about->about_desc!!}</p>
                 </div>
             </div>
         </div>
@@ -38,28 +36,26 @@
         <div class="row g-0 align-items-center">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="textBox">
-                    <h3 class="siteTtlsm">Our Mission</h3>
-                    <p class="siteParasm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
-                    <p class="siteParasm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
+                    <h3 class="siteTtlsm">{{$about->mission_heading}}</h3>
+                    <p class="siteParasm">{!!$about->mission_desc!!}</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="aboutImg">
-                    <img src="frontend/assets/images/project-img4.png" alt="">
+                    <img src="{{$about->mission_img}}" alt="">
                 </div>
             </div>
         </div>
         <div class="row g-0 align-items-center">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="textBox">
-                    <h3 class="siteTtlsm">Our Vision</h3>
-                    <p class="siteParasm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
-                    <p class="siteParasm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
+                    <h3 class="siteTtlsm">{{$about->vision_heading}}</h3>
+                    <p class="siteParasm">{!!$about->vision_desc!!}</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="aboutImg">
-                    <img src="frontend/assets/images/project-img4.png" alt="">
+                    <img src="{{$about->vision_img}}" alt="">
                 </div>
             </div>
         </div>
@@ -73,15 +69,14 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="textBox">
-                    <h2 class="siteTtl">From the Founder’s Desk</h2>
-                    <p class="sitePara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
-                    <p class="sitePara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
+                    <h2 class="siteTtl">{{$about->founder_heading}}</h2>
+                    <p class="sitePara">{!!$about->founder_desc!!}</p>
                     <h4 class="sigTtl">the Founder</h4>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="aboutImg">
-                    <img src="frontend/assets/images/founder-img.jpg" alt="">
+                    <img src="{{$about->founder_img}}" alt="">
                 </div>
             </div>
         </div>
