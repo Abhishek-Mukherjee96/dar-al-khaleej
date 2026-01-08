@@ -41,7 +41,16 @@
                         @endphp
 
                         <div class="btnPanel">
-                            <a href="tel:{{ config('app.phone') }}">Enquire Now</a>
+                            <a href="javascript:void(0);"
+                                class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#enquiryModal"
+                                data-product-id="{{ $product->product_id }}"
+                                data-product-name="{{ $product->product_name }}"
+                                data-rental-duration="{{ $product->rental_duration }}"
+                                data-available-for="{{ $product->available_for }}">
+                                Enquire Now
+                            </a>
                             <a target="_blank"
                                 href="https://api.whatsapp.com/send?text={{ rawurlencode($message) }}">
                                 WhatsApp
@@ -113,18 +122,96 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="enquiryModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <form method="POST" action="{{ route('product_enquiry') }}">
+                    @csrf
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="enquiryTitle"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" name="product_id" id="product_id">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Rental Duration</label>
+                                <select name="rental_duration" class="form-control" id="rental_duration" required>
+                                    <option value="">Select</option>
+                                    <option value="Daily">Daily</option>
+                                    <option value="Weekly">Weekly</option>
+                                    <option value="Monthly">Monthly</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Available For</label>
+                                <select name="available_for" class="form-control" id="available_for" required>
+                                    <option value="">Select</option>
+                                    <option value="Home">Home</option>
+                                    <option value="Office">Office</option>
+                                    <option value="Event">Event</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label>Name</label>
+                            <input type="text" class="form-control" name="name" required>
+                            @error('name')
+                            <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="email" required>
+                            @error('email')
+                            <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Phone</label>
+                            <input type="text" class="form-control" name="phone" required>
+                            @error('phone')
+                            <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Message</label>
+                            <textarea class="form-control" name="message"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
     @endif
     @endsection
-
     @section('scripts')
     <script>
-        tinymce.init({
-            selector: '#description, #specification, #features',
-            plugins: 'lists link image table code help wordcount',
-            toolbar: 'undo redo | bold italic underline | bullist numlist | link image | alignleft aligncenter alignright alignjustify | table | code',
-            menubar: false,
-            branding: false,
-            height: 200
+        document.getElementById('enquiryModal').addEventListener('show.bs.modal', function(event) {
+            const button = event.relatedTarget;
+
+            document.getElementById('product_id').value =
+                button.getAttribute('data-product-id');
+
+            document.getElementById('enquiryTitle').innerText =
+                'Enquiry for ' + button.getAttribute('data-product-name');
+
+            document.getElementById('rental_duration').value =
+                button.getAttribute('data-rental-duration');
+
+            document.getElementById('available_for').value =
+                button.getAttribute('data-available-for');
         });
     </script>
     @endsection

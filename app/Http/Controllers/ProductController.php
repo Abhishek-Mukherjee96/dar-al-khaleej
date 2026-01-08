@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\ProductEnquiry;
 
 class ProductController extends Controller
 {
@@ -63,5 +64,29 @@ class ProductController extends Controller
             ->get();
 
         return view('frontend.product-details', compact('product', 'related_products'));
+    }
+
+    public function product_enquiry(Request $request)
+    {
+        $request->validate([
+            'product_id' => 'required',
+            'name' => 'required|string|max:100',
+            'email' => 'required|email',
+            'phone' => 'required|string|max:20',
+        ]);
+
+        $product = Product::findOrFail($request->product_id);
+
+        ProductEnquiry::create([
+            'product_id' => $product->product_id,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'message' => $request->message,
+            'rental_duration' => $request->rental_duration,
+            'available_for' => $request->available_for
+        ]);
+
+        return redirect()->route('thankyou');
     }
 }

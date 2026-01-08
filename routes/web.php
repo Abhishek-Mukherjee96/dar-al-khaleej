@@ -43,6 +43,10 @@ Route::post('/contact-us-action', [ContactController::class, 'contact_form_actio
 Route::get('/products', [ProductController::class, 'products'])->name('products');
 Route::get('/product/{slug}', [ProductController::class, 'product_details'])->name('product_details');
 Route::post('/products/filter', [ProductController::class, 'products_filter'])->name('products_filter');
+Route::post('/product-enquiry', [ProductController::class, 'product_enquiry'])->name('product_enquiry');
+Route::get('/thank-you', function () {
+    return view('frontend.thankyou');
+})->name('thankyou');
 
 
 Route::group(['middleware' => 'guest'], function () {
