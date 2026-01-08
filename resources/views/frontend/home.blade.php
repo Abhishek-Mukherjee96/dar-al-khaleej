@@ -61,56 +61,25 @@
                     <div class="fsliderdesc">
                         <h2>Browse Furniture Rentals</h2>
                         <p>Premium furniture rentals for homes, offices, and events — delivered and set up for you.</p>
-                        <a href="#">View All</a>
+                        <a href="{{route('products')}}">View All</a>
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
                     <div class="boxslider">
                         <div class="owl-carousel" id="furnitureSlider">
+                            @foreach($products as $product)
                             <div class="item">
                                 <div class="furnitureBox">
                                     <div class="imgtham">
-                                        <img src="frontend/assets/images/furniture-img1.png" alt="">
+                                        <img src="{{ Storage::url($product->thumbnail) }}" alt="">
                                     </div>
                                     <div class="text">
-                                        <p>Home Furniture Rental</p>
-                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                                        <p>{{$product->product_name}}</p>
+                                        <a href="{{ route('product_details', $product->slug) }}"><i class="fa-solid fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="furnitureBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/furniture-img2.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <p>Home Furniture Rental</p>
-                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="furnitureBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/furniture-img3.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <p>Home Furniture Rental</p>
-                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="furnitureBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/furniture-img3.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <p>Home Furniture Rental</p>
-                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -195,7 +164,7 @@
                 </div>
             </div>
             <div class="btn-sec text-center">
-                <a href="#" class="btn">Request A Quote</a>
+                <a href="{{ route('contact_us') }}" class="btn">Request A Quote</a>
             </div>
         </div>
     </div>

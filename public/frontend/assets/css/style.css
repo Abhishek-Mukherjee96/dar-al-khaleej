@@ -1480,7 +1480,7 @@ padding-left: 0;
     justify-content: flex-end;
 }
 .proCatSrc .srcWrap{
-    max-width: 660px;
+    /* max-width: 660px; */
     width: 100%;
     position: relative;
 }

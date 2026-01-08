@@ -29,20 +29,14 @@
 
                         <h3>Rental Details</h3>
                         <ul>
-                            <li><strong>Rental Type:</strong> {{ $product->rental_type ?? 'Furniture Rental Only' }}</li>
-                            <li><strong>Available For:</strong> {{ $product->available_for ?? 'Home • Office • Event' }}</li>
-                            <li><strong>Rental Duration:</strong> {{ $product->rental_duration ?? 'Daily • Weekly • Monthly' }}</li>
-                            <li><strong>Condition:</strong> {{ $product->condition ?? 'Well-maintained' }}</li>
+                            <li><strong>Rental Type:</strong> {{ $product->rental_type ?? 'N/A' }}</li>
+                            <li><strong>Available For:</strong> {{ $product->available_for ?? 'N/A' }}</li>
+                            <li><strong>Rental Duration:</strong> {{ $product->rental_duration ?? 'N/A' }}</li>
+                            <li><strong>Condition:</strong> {{ $product->conditions ?? 'N/A' }}</li>
                         </ul>
-
-                        {{--<h5>
-                            {{ $product->price }} AED /
-                        <sub>{{ $product->price_type ?? 'month' }}</sub>
-                        </h5>--}}
                         @php
                         $message = "Hi, I'm interested in this product:\n\n"
                         . "Product: {$product->product_name}\n"
-                        . "Price: {$product->price} AED / month\n"
                         . "Link: " . url()->current();
                         @endphp
 
@@ -58,27 +52,40 @@
             </div>
             <div class="productDesc">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Description</button>
+                    <li class="nav-item">
+                        <button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#description"
+                            type="button" role="tab" aria-controls="description" aria-selected="true">
+                            Description
+                        </button>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Specification</button>
+                    <li class="nav-item">
+                        <button class="nav-link" id="spec-tab" data-bs-toggle="tab" data-bs-target="#specification"
+                            type="button" role="tab" aria-controls="specification" aria-selected="false">
+                            Specification
+                        </button>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Key Features</button>
+                    <li class="nav-item">
+                        <button class="nav-link" id="feat-tab" data-bs-toggle="tab" data-bs-target="#features"
+                            type="button" role="tab" aria-controls="features" aria-selected="false">
+                            Key Features
+                        </button>
                     </li>
                 </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="prodescText">
-                            <p>The Wood Chair offers a perfect balance of comfort, durability, and timeless design. Crafted with a strong wooden frame and a comfortable cushioned seat, this chair is ideal for dining areas, meeting rooms, event seating, and temporary setups. Its simple yet elegant design blends easily with both modern and traditional interiors.</p>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">b</div>
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">c</div>
 
+                <div class="tab-content mt-3">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="desc-tab">
+                        {!! $product->description !!}
+                    </div>
+                    <div class="tab-pane fade" id="specification" role="tabpanel" aria-labelledby="spec-tab">
+                        {!! $product->specifications !!}
+                    </div>
+                    <div class="tab-pane fade" id="features" role="tabpanel" aria-labelledby="feat-tab">
+                        {!! $product->key_features !!}
+                    </div>
                 </div>
+
             </div>
+
         </div>
     </div>
 
@@ -107,4 +114,17 @@
         </div>
     </div>
     @endif
+    @endsection
+
+    @section('scripts')
+    <script>
+        tinymce.init({
+            selector: '#description, #specification, #features',
+            plugins: 'lists link image table code help wordcount',
+            toolbar: 'undo redo | bold italic underline | bullist numlist | link image | alignleft aligncenter alignright alignjustify | table | code',
+            menubar: false,
+            branding: false,
+            height: 200
+        });
+    </script>
     @endsection

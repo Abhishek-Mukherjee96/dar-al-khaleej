@@ -15,7 +15,13 @@ class Product extends Model
         'product_name',
         'slug',
         'description',
+        'specifications',
+        'key_features',
         'thumbnail',
+        'rental_type',
+        'available_for',
+        'rental_duration',
+        'conditions',
         'status'
     ];
 

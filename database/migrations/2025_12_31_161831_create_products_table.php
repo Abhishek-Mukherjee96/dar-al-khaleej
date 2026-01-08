@@ -18,6 +18,12 @@ return new class extends Migration
             $table->string('thumbnail');
             $table->string('slug')->unique();
             $table->text('description');
+            $table->text('specifications');
+            $table->text('key_features');
+            $table->string('rental_type');
+            $table->string('available_for');
+            $table->string('rental_duration');
+            $table->string('conditions');
             $table->integer('status')->default(1);
             $table->timestamps();
         });

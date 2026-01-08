@@ -111,10 +111,60 @@
                         </div>
                         @endif
                     </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Rental Type <span class="text-danger">*</span></label>
+                        <input type="text"
+                            class="form-control"
+                            wire:model="rental_type">
+                        @error('rental_type')
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Available For <span class="text-danger">*</span></label>
+                        <input type="text"
+                            class="form-control"
+                            wire:model="available_for">
+                        @error('available_for')
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Rental Duration <span class="text-danger">*</span></label>
+                        <input type="text"
+                            class="form-control"
+                            wire:model="rental_duration">
+                        @error('rental_duration')
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Condition <span class="text-danger">*</span></label>
+                        <input type="text"
+                            class="form-control"
+                            wire:model="conditions">
+                        @error('conditions')
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
                     <div class="col-md-12 mb-3">
                         <label>Description <span class="text-danger">*</span></label>
                         <textarea class="form-control" wire:model="description"></textarea>
                         @error('description')
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label>Specification <span class="text-danger">*</span></label>
+                        <textarea class="form-control" wire:model="specifications"></textarea>
+                        @error('specifications')
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label>Key Features <span class="text-danger">*</span></label>
+                        <textarea class="form-control" wire:model="key_features"></textarea>
+                        @error('key_features')
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>

@@ -53,7 +53,7 @@
                                 <img src="frontend/assets/images/mail-icon.png" alt="">
                             </div>
                             <div class="text">
-                                <a href="mailto:support@darkhaleej.com">support@darkhaleej.com</a>
+                                <a href="mailto:daralkhaleejfurniture@gmail.com">daralkhaleejfurniture@gmail.com</a>
                             </div>
                         </div>
                         <div class="conBox">
@@ -61,7 +61,7 @@
                                 <img src="frontend/assets/images/phone-icon.png" alt="">
                             </div>
                             <div class="text">
-                                <a href="tel:+971 50 123 4567">+971 50 123 4567</a>
+                                <a href="tel:971543573734">971543573734</a>
                             </div>
                         </div>
                         <div class="conBox">
@@ -69,8 +69,7 @@
                                 <img src="frontend/assets/images/address-icon.png" alt="">
                             </div>
                             <div class="text">
-                                <p>Dubai, United Arab Emirates</p>
-                                <span>Al Quoz Industrial Area 3, Warehouse 12</span>
+                                <p>Sharjah Media City, UAE</p>
                             </div>
                         </div>
                     </div>

@@ -19,6 +19,12 @@ class Product extends Component
     public $category_id;
     public $product_name;
     public $description;
+    public $specifications;
+    public $key_features;
+    public $rental_type;
+    public $available_for;
+    public $rental_duration;
+    public $conditions;
     public $status = 1;
     public $thumbnail;
     public $gallery = [];
@@ -33,6 +39,12 @@ class Product extends Component
             'category_id' => 'required|exists:categories,category_id',
             'product_name' => 'required|string|max:255|unique:products,product_name,' . $this->product_id . ',product_id',
             'description' => 'required|string',
+            'specifications' => 'required|string',
+            'key_features' => 'required|string',
+            'rental_type' => 'required|string',
+            'available_for' => 'required|string',
+            'rental_duration' => 'required|string',
+            'conditions' => 'required|string',
             'thumbnail' => $this->isEdit ? 'nullable|image|max:2048' : 'required|image|max:2048',
             'gallery.*' => 'nullable|image|max:2048',
         ];
@@ -65,8 +77,14 @@ class Product extends Component
         $product = ProductModel::create([
             'category_id' => $this->category_id,
             'product_name' => $this->product_name,
+            'rental_type' => $this->rental_type,
+            'available_for' => $this->available_for,
+            'rental_duration' => $this->rental_duration,
+            'conditions' => $this->conditions,
             'slug' => Str::slug($this->product_name),
             'description' => $this->description,
+            'specifications' => $this->specifications,
+            'key_features' => $this->key_features,
             'thumbnail' => $thumbPath,
             'status' => $this->status,
         ]);
@@ -92,7 +110,13 @@ class Product extends Component
         $this->product_id = $product->product_id;
         $this->category_id = $product->category_id;
         $this->product_name = $product->product_name;
+        $this->rental_type = $product->rental_type;
+        $this->available_for = $product->available_for;
+        $this->rental_duration = $product->rental_duration;
+        $this->conditions = $product->conditions;
         $this->description = $product->description;
+        $this->specifications = $product->specifications;
+        $this->key_features = $product->key_features;
         $this->status = $product->status;
         $this->thumbnail_old = $product->thumbnail;
 
@@ -109,6 +133,12 @@ class Product extends Component
             'product_name' => $this->product_name,
             'slug' => Str::slug($this->product_name),
             'description' => $this->description,
+            'specifications' => $this->specifications,
+            'key_features' => $this->key_features,
+            'rental_type' => $this->rental_type,
+            'available_for' => $this->available_for,
+            'rental_duration' => $this->rental_duration,
+            'conditions' => $this->conditions,
             'status' => $this->status,
         ];
 
@@ -169,6 +199,12 @@ class Product extends Component
         $this->status = 1;
         $this->thumbnail = null;
         $this->thumbnail_old = null;
+        $this->specifications = '';
+        $this->key_features = '';
+        $this->rental_type = '';
+        $this->available_for = '';
+        $this->rental_duration = '';
+        $this->conditions = '';
         $this->gallery = [];
     }
 
