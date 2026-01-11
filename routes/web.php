@@ -34,6 +34,16 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('about-edit', [AdminController::class, 'about_edit'])->name('about_edit');
     Route::post('about-edit-action', [AdminController::class, 'about_edit_action'])->name('about_edit_action');
 
+    Route::get('faq-list', [AdminController::class, 'faq_list'])->name('faq_list');
+    Route::get('add-faq', [AdminController::class, 'add_faq'])->name('add_faq');
+    Route::post('add-faq-action', [AdminController::class, 'add_faq_action'])->name('add_faq_action');
+    Route::get('edit-faq-action/{id}', [AdminController::class, 'edit_faq_action'])->name('edit_faq_action');
+    Route::post('update-faq-action/{id}', [AdminController::class, 'update_faq_action'])->name('update_faq_action');
+    Route::get('update-status-faq-action/{id}', [AdminController::class, 'update_status_faq_action'])->name('update_status_faq_action');
+    Route::get('delete-faq-action/{id}', [AdminController::class, 'delete_faq_action'])->name('delete_faq_action');
+
+    Route::get('why-choose-us-edit', [AdminController::class, 'why_choose_us_edit'])->name('why_choose_us_edit');
+    Route::post('why-choose-us-edit-action', [AdminController::class, 'why_choose_us_edit_action'])->name('why_choose_us_edit_action');
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('index');

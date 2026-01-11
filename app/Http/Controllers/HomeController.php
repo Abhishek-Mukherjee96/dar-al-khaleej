@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Product;
+use App\Models\WhyChooseUs;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,9 +18,11 @@ class HomeController extends Controller
     }
 
     public function faq(){
-        return view('frontend.faq');
+        $faqs = Faq::where('status',1)->get();
+        return view('frontend.faq', compact('faqs'));
     }
     public function why_choose_us(){
-        return view('frontend.why_choose_us');
+        $why_choose = WhyChooseUs::first();
+        return view('frontend.why_choose_us',compact('why_choose'));
     }
 }

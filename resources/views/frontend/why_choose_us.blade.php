@@ -18,28 +18,26 @@
         <div class="row g-0 align-items-center">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="textBox">
-                    <h3 class="siteTtlsm">Lorem ipsum dolor sit amet</h3>
-                    <p class="siteParasm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
-                    <p class="siteParasm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
+                    <h3 class="siteTtlsm">{{$why_choose->title_1}}</h3>
+                    <p class="siteParasm">{!!$why_choose->desc_1!!}</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="aboutImg">
-                    <img src="frontend/assets/images/project-img4.png" alt="">
+                    <img src="{{asset($why_choose->img_1)}}" alt="">
                 </div>
             </div>
         </div>
         <div class="row g-0 align-items-center">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="textBox">
-                    <h3 class="siteTtlsm">Lorem ipsum dolor sit amet</h3>
-                    <p class="siteParasm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
-                    <p class="siteParasm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies lacinia, nisl nisl aliquam nisl, eget lacinia nisl nisl sit amet nisl.</p>
+                    <h3 class="siteTtlsm">{{$why_choose->title_2}}</h3>
+                    <p class="siteParasm">{!!$why_choose->desc_2!!}</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="aboutImg">
-                    <img src="frontend/assets/images/project-img4.png" alt="">
+                    <img src="{{asset($why_choose->img_2)}}" alt="">
                 </div>
             </div>
         </div>
