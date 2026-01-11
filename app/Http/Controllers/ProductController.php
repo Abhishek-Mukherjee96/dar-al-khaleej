@@ -89,4 +89,10 @@ class ProductController extends Controller
 
         return redirect()->route('thankyou');
     }
+
+    public function gallery(){
+        $categories = Category::where('status', 1)->get();
+        $products = Product::where('status', 1)->get();
+        return view('frontend.gallery',compact('categories', 'products'));
+    }
 }

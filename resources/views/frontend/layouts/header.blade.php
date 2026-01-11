@@ -10,9 +10,9 @@
                         <li><a href="{{ route('index') }}">Home</a>
                         <li><a href="{{ route('about_us') }}">About</a></li>
                         <li><a href="{{ route('products') }}">Products</a></li>
-                        <li><a href="#">Why Choose Us</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="{{route('why_choose_us')}}">Why Choose Us</a></li>
+                        <li><a href="{{ route('gallery') }}">Gallery</a></li>
+                        <li><a href="{{ route('faq') }}">FAQ</a></li>
                         <li><a href="{{ route('contact_us') }}">Contact us</a></li>
                         <li><a href="#">Blog</a></li>
                     </ul>

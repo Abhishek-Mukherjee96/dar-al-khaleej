@@ -39,6 +39,9 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/about-us', [AboutController::class, 'about_us'])->name('about_us');
 Route::get('/contact-us', [ContactController::class, 'contact_us'])->name('contact_us');
+Route::get('/gallery', [ProductController::class, 'gallery'])->name('gallery');
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('/why-choose-us', [HomeController::class, 'why_choose_us'])->name('why_choose_us');
 Route::post('/contact-us-action', [ContactController::class, 'contact_form_action'])->name('contact_form_action');
 Route::get('/products', [ProductController::class, 'products'])->name('products');
 Route::get('/product/{slug}', [ProductController::class, 'product_details'])->name('product_details');
