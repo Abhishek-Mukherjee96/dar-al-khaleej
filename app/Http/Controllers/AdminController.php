@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AboutUs;
+use App\Models\Blog;
 use App\Models\ContactUs;
 use App\Models\Faq;
 use App\Models\WhyChooseUs;
@@ -173,5 +174,84 @@ class AdminController extends Controller
         $why_choose_us->save();
 
         return back()->with('success', 'Why choose us updated successfully');
+    }
+
+    public function blogs(){
+        $blogs = Blog::latest()->paginate(10);
+        return view('admin.blog.index', compact('blogs'));
+    }
+
+        public function add_blog()
+    {
+        return view('admin.blog.add');
+    }
+
+    public function add_blog_action(Request $request)
+    {
+        $request->validate([
+            'title'       => 'required|string|max:255',
+            'description' => 'required',
+            'image'       => 'required|max:2048',
+        ]);
+
+        $imageName = null;
+        if ($request->hasFile('image')) {
+            $imageName = rand().'.'.$request->image->extension();
+            $request->image->move('assets/blogs', $imageName);
+        }
+
+        $blog = new Blog();
+        $blog->title       = $request->title;
+        $blog->slug        = Str::slug($request->title);
+        $blog->description = $request->description;
+        $blog->image       = 'assets/blogs/'.$imageName;
+        $blog->status      = 1;
+        $blog->created_by  = auth()->id();
+        $blog->save();
+
+        return redirect()->route('blogs')->with('success', 'Blog created successfully');
+    }
+
+    public function edit_blog_action($id)
+    {
+        $blog = Blog::findOrFail($id);
+        return view('admin.blog.edit', compact('blog'));
+    }
+
+    public function update_blog_action(Request $request, $id)
+    {
+        $blog = Blog::findOrFail($id);
+
+        $request->validate([
+            'title'       => 'required|string|max:255',
+            'description' => 'required',
+            'image'       => 'nullable|max:2048',
+        ]);
+
+        if ($request->hasFile('image')) {
+            if (file_exists(public_path($blog->image))) {
+                unlink(public_path($blog->image));
+            }
+
+            $imageName = rand().'.'.$request->image->extension();
+            $request->image->move('assets/blogs', $imageName);
+            $blog->image = 'assets/blogs/'.$imageName;
+        }
+
+        $blog->title = $request->title;
+        $blog->slug = Str::slug($request->title);
+        $blog->description = $request->description;
+        $blog->status = $request->status;
+        $blog->save();
+
+        return redirect()->route('blogs')->with('success', 'Blog updated successfully');
+    }
+
+    public function delete_blog_action($id)
+    {
+        $blog = Blog::findOrFail($id);
+        $blog->delete();
+
+        return redirect()->route('blogs')->with('success', 'Blog deleted successfully');
     }
 }

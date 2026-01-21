@@ -116,6 +116,17 @@
                     </a>
                 </li>
                 <li>
+                    <a class="nav-link {{ request()->is('blogs') ? 'active' : '' }} ? 'active' : '' }}"
+                        href="{{ route('blogs') }}" role="button">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon">
+                                <span class="bi-patch-question"></span>
+                            </span>
+                            <span class="nav-link-text ps-1">Blog</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
                     <a class="nav-link {{ request()->is('why-choose-us-edit') ? 'active' : '' }} ? 'active' : '' }}"
                         href="{{ route('why_choose_us_edit') }}" role="button">
                         <div class="d-flex align-items-center">

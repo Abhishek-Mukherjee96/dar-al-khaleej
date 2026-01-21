@@ -14,7 +14,7 @@
                         <li><a href="{{ route('gallery') }}">Gallery</a></li>
                         <li><a href="{{ route('faq') }}">FAQ</a></li>
                         <li><a href="{{ route('contact_us') }}">Contact us</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="{{ route('blog') }}">Blog</a></li>
                     </ul>
                 </div>
                 <div class="rqBtn">

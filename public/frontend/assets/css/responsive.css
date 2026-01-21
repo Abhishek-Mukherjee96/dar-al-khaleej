@@ -106,9 +106,761 @@
   .siteTtl{
     font-size:46px;
   }
+  .siteTtlsm {
+    font-size: 32px;
+}
   .sitePara{
     font-size: 16px;
   }
   
 
+}
+@media screen and (max-width: 1200px){
+  .common-sliderWrap {
+    max-width: 100%;
+    padding-left: 15px;
+  }
+  .bannerInner .desc .text h1,
+  .moreProSec .ttl h2{
+    font-size: 56px;
+  }
+  .siteTtl,
+  .productDetails-sec .proInfo h2{
+    font-size:44px;
+  }
+  .sitePara{
+    font-size: 16px;
+  }
+  .siteTtlsm {
+    font-size: 32px;
+  }
+  .productDetails-sec .proInfo h3{
+    font-size: 30px;
+  }
+  .productDetails-sec .proInfo h5{
+    font-size: 26px;
+  }
+  .productDetails-sec .proInfo h5 sub{
+    font-size: 16px;
+  }
+  .productDetails-sec .btnPanel a{
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+  .productDesc{
+    min-height: 300px;
+  }
+  .productDesc .nav-tabs .nav-item .nav-link{
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+  .header .headerwrap{
+    padding: 0 100px;
+  }
+  .furniture-sec .counterSec{
+    padding: 0 15px;
+  }
+
+  .rental-serviceBox {
+    padding: 24px 24px;
+  }
+  .rental-serviceBox h4 {
+    font-size: 30px;
+  }
+  .rental-serviceBox h2{
+    font-size: 120px;
+    margin: 30px 0;
+  }
+  .rental-serviceWrap .col-lg-4:first-child .rental-serviceBox {
+    border-radius: 50px 50px 0 50px;
+  }
+  .rental-serviceWrap .col-lg-4:last-child .rental-serviceBox {
+    border-radius: 0px 50px 0 50px;
+  }
+  .rental-service-sec .rental-serviceWrap{
+    border-radius: 70px;
+  }
+  .banner .owl-stage-outer {
+    border-radius: 70px 70px 0 0;
+  }
+  .bannerInner{
+    border-radius: 70px;
+  }
+  .furniture-sec .common-slider{
+    border-radius: 0 0 70px 70px;
+  }
+  .allproduct-sec,
+  .project-sec,
+  .furniture-sec .common-slider,
+  .rental-service-sec .rental-serviceWrap{
+    padding: 70px 0;
+  }
+  .testimonial-sec .testimonialBox {
+    padding: 64px 0;
+    position: relative;
+  }
+  .testimonialBoxWrap{
+    padding: 120px 0;
+    border-radius: 70px;
+  }
+  .testimonial-sec .testimonialBox .test-iconTop,
+  .testimonial-sec .testimonialBox .test-iconBottom{
+    max-width: 200px;
+  }
+  .testimonialBoxWrap p {
+    font-size: 24px;
+    max-width: 670px;
+    margin: 0 auto 40px;
+  }
+  .testimonialBoxWrap ul{
+    margin: 0 0 40px;
+  }
+  .testimonialBoxWrap ul li{
+    font-size: 30px;
+  }
+  .testimonialBoxWrap h4{
+    font-size: 50px;
+  }
+  .tabProBox .text p {
+    font-size: 16px;
+  }
+  .allproduct-sec .ttl h2, 
+  .rental-service-sec .ttl h2,
+  .project-sec .ttl h2{
+    font-size: 54px;
+  }
+
+
+  .banner .bnDesc .text h1 {
+    font-size: 56px;
+    margin: 0 0 30px;
+  }
+  .banner .bnDesc .text p{
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .banner .bnDesc .text a {
+    font-size: 18px;
+    padding: 16px 60px;
+  }
+  .banner .bnDesc .text {
+    max-width: 726px;
+  }
+
+  .furniture-sec .counterBox{
+    padding: 20px;
+  }
+  .furniture-sec .counterBox ul li span, 
+  .furniture-sec .counterBox ul li h6{
+    font-size: 30px;
+  }
+  .furniture-sec .counterBox ul li p{
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  .fsliderdesc h2{
+    font-size: 30px;
+  }
+  .fsliderdesc a, 
+  .rental-serviceWrap .btn-sec a, 
+  .masonry .brick .brickBtn a {
+    font-size: 16px;
+    padding: 14px 40px;
+  }
+  .furnitureBox .text p {
+    font-size: 22px;
+  }
+  .furnitureBox .text a {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  .productTab .nav-tabs .nav-item .nav-link {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+  .masonry{
+    gap: 10px;
+  }
+  .masonry .brick{
+    margin-bottom: 10px;
+  }
+  .blogBox .text .info p {
+    font-size: 16px;
+  }
+  .blogBox .text .info span{
+    font-size: 14px;
+  }
+  .ftBoxWarp .ftBox ul li a{
+    font-size: 14px;
+  }
+  .ftBoxWarp .ftBox ul li {
+    margin: 0 0 8px;
+    line-height: 1.2;
+    font-size: 14px;
+  }
+
+  .ftBoxWarp .ftBox ul li {
+    margin: 0 0 8px;
+    line-height: 1.2;
+    font-size: 14px;
+  }
+  .ftBoxWarp .ftBox ul li a,
+  .conBox a, 
+  .conBox p {
+    font-size: 14px;
+  }
+  .conBox a, .conBox p{
+    letter-spacing: -1px;
+  }
+  .newsletterBox .btnBox .btn{
+    padding: 14px;
+  }
+  .copyrightSec{
+    padding: 20px 0;
+  }
+  .copyrightSec p{
+    line-height: 1.2;
+  }
+  .copyrightSec ul li{
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .videoSection {
+    height: 550px;
+  }
+  .blogTtl h2{
+    font-size: 40px;
+  }
+  .blog-details-page {
+    padding: 40px 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body{
+    padding-top: 56px;
+  }
+  .stellarnav.light.right .menu-toggle{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .header .headerwrap {
+    padding: 0 66px;
+  }
+  .header .headerwrap .logo {
+    max-width: 160px;
+  }
+  .header .headerwrap .rthd{
+    padding: 10px 0 0;
+  }
+  .header .headerwrap .rthd .rqBtn a {
+    font-size: 12px;
+    padding: 10px 14px;
+    border-radius: 7px;
+  }
+  .banner .owl-stage-outer {
+    border-radius: 50px 50px 0 0;
+  }
+  .bannerInner{
+    border-radius: 50px;
+  }
+  .furniture-sec .common-slider {
+    border-radius: 0 0 50px 50px;
+  }
+  .rental-service-sec .rental-serviceWrap {
+    border-radius: 50px;
+  }
+
+
+  .testimonialBoxWrap {
+    padding: 90px 0;
+    border-radius: 50px;
+  }
+  .testimonial-sec .testimonialBox {
+    padding: 51px 0;
+  }
+  .testimonial-sec .testimonialBox .test-iconTop, 
+  .testimonial-sec .testimonialBox .test-iconBottom {
+    max-width: 160px;
+  }
+  .testimonial-sec .testimonialBox .test-iconTop {
+    left: 50px;
+  }
+  .testimonial-sec .testimonialBox .test-iconBottom {
+    right: 50px;
+  }
+  .banner .owl-stage-outer {
+    border-radius: 50px 50px 0 0;
+  }
+  .bannerInner{
+    border-radius: 50px;
+  }
+  .banner .bnDesc .text {
+    max-width: 648px;
+  }
+  .banner .bnDesc .text h1 {
+    font-size: 46px;
+    margin: 0 0 30px;
+  }
+  .banner .bnDesc .text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .banner .bnDesc .text a {
+    font-size: 14px;
+    padding: 14px 40px;
+  }
+  .banner .owl-dots{
+    bottom: 125px;
+  }
+  .furniture-sec .counterSec{
+    top: -95px;
+  }
+  .furniture-sec .counterBox {
+    padding: 15px;
+  }
+  .furniture-sec .counterBox ul li span, 
+  .furniture-sec .counterBox ul li h6 {
+    font-size: 26px;
+  }
+  .furniture-sec .counterBox ul li span, 
+  .furniture-sec .counterBox ul li h6 {
+    font-size: 26px;
+  }
+  .fsliderdesc {
+    padding: 0 20px 0 0;
+  }
+  .blogBox .text .info{
+    padding: 15px;
+  }
+
+  .allproduct-sec, 
+  .project-sec, 
+  .furniture-sec .common-slider, 
+  .rental-service-sec .rental-serviceWrap {
+    padding: 50px 0;
+  }
+  .rental-serviceWrap .btn-sec {
+    padding: 30px 0 0;
+  }
+  .fsliderdesc a, 
+  .rental-serviceWrap .btn-sec a, 
+  .masonry .brick .brickBtn a {
+    font-size: 14px;
+    padding: 12px 30px;
+    border-radius: 7px;
+  }
+  .rental-serviceBox {
+    padding: 20px 20px;
+  }
+  .rental-serviceBox h4 {
+    font-size: 22px;
+  }
+  .rental-serviceBox h2 {
+    font-size: 90px;
+    margin: 15px 0;
+  }
+  .rental-serviceBox p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .rental-serviceWrap .col-lg-4:first-child .rental-serviceBox {
+    border-radius: 30px 30px 0 30px;
+  }
+  .rental-serviceWrap .col-lg-4:last-child .rental-serviceBox {
+    border-radius: 0px 30px 0 30px;
+  }
+  .allproduct-sec .ttl h2, .rental-service-sec .ttl h2, .project-sec .ttl h2 {
+    font-size: 46px;
+  }
+  .allproduct-sec .ttl h2, 
+  .rental-service-sec .ttl h2,
+  .project-sec .ttl h2{
+    padding-bottom: 20px;
+  }
+  .allproduct-sec .ttl, 
+  .rental-service-sec .ttl,
+  .project-sec .ttl{
+    margin-bottom: 40px;
+  }
+  .blogBox .text a{
+    height: 40px;
+    width: 40px;
+  }
+  .productTab .nav-tabs{
+    gap: 10px;
+  }
+  .productTab .nav-tabs .nav-item .nav-link {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+  .productTab .tab-pane {
+    padding: 30px 0 0;
+  }
+  .testimonialBoxWrap ul {
+    gap: 10px;
+    margin: 0 0 30px;
+  }
+  .testimonialBoxWrap ul li {
+    font-size: 26px;
+  }
+
+  .ft-logo {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+  .footer .specialBox {
+    padding: 0 0 40px;
+  }
+  .footer .specialBox ul {
+    max-width: 100px;
+    margin: 0 auto;
+  }
+  .footer {
+    padding: 20px 0 0;
+  }
+  .productDesc {
+    padding: 15px;
+    border-radius: 30px;
+    margin: 30px 0 0;
+  }
+  .productDesc .nav-tabs{
+    flex-wrap: wrap;
+  }
+  .bannerInner .desc .text h1, .moreProSec .ttl h2 {
+    font-size: 46px;
+  }
+  .siteTtl, .productDetails-sec .proInfo h2 {
+    font-size: 40px;
+  }
+  .productDetails-sec .proInfo h3 {
+    font-size: 28px;
+  }
+  .videoSection {
+    height: 450px;
+  }
+  .blogTtl h2,
+  .sidebar-card h3{
+    font-size: 36px;
+  }
+  .contact-info-text h2{
+    font-size: 30px;
+  }
+  .contact-info-text span{
+    font-size: 14px;
+  }
+  .contact-info-icon i{
+    font-size: 36px;
+  }
+  .contact-info-item{
+    padding: 30px 15px;
+  }
+  .contact-info{
+    margin-bottom: 15px;
+    height: auto;
+  }
+  .contact-page-sec,
+  .faq-section {
+    padding: 40px 0;
+  }
+  .faq-section .accordion-button h5{
+    font-size: 24px;
+    letter-spacing: normal;
+  }
+  .proSideBar{
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .proSideBarBox h3{
+    font-size: 30px;
+    padding: 0 0 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .proSideBarBox h3 {
+    font-size: 26px;
+    padding: 0 0 15px;
+}
+  .custChekBox label{
+    font-size: 14px;
+  }
+  .proSideBar{
+    padding: 15px;
+  }
+  .contact-page-sec .row{
+    flex-direction: column-reverse;
+  }
+  .allproduct-sec, .project-sec, .furniture-sec .common-slider, .rental-service-sec .rental-serviceWrap {
+    padding: 40px 0;
+  }
+  .faq-section .accordion-body{
+    padding: 15px;
+    font-size: 14px;
+  }
+  .faq-section .accordion-button h5{
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+  .faq-section .ttl h2{
+    margin-bottom: 30px;
+  }
+  .blogTtl h2,
+  .sidebar-card h3{
+    font-size: 32px;
+  }
+  .aboutSec .textBox h2{
+    margin-bottom: 20px;
+  }
+  .blog-details-info-auth .text p{
+    font-size: 20px;
+  }
+  .sitePara {
+    font-size: 14px;
+  }
+  .imgTextPanel .textBox h3 {
+    margin-bottom: 20px;
+  }
+  .imgTextPanel .row:nth-child(even) .textBox {
+    padding:20px 0;
+  }
+  .aboutSec .textBox{
+    padding-top: 30px;
+  }
+  .aboutSec.pb-0 .row,
+  .imgTextPanel .row,
+  .imgTextPanel .row:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .aboutSec.pb-0 .textBox{
+    padding-bottom: 30px;
+  }
+  .sigTtl{
+    font-size: 30px;
+  }
+  .imgTextPanel.whyChooseUspage{
+    padding: 40px 0 10px;
+  }
+  .imgTextPanel {
+    padding: 0px 0 0px;
+    margin: 0;
+  }
+  .imgTextPanel .textBox{
+    padding: 20px 0 0;
+  }
+  .siteParasm {
+    font-size: 14px;
+  }
+  .videoSection {
+    height: 350px;
+  }
+  .productDetails-sec .proInfo{
+    padding-top: 30px;
+  }
+  .bannerInner .desc .text h1, .moreProSec .ttl h2 {
+    font-size: 36px;
+  }
+  .siteTtl, .productDetails-sec .proInfo h2 {
+    font-size: 30px;
+  }
+  .productDetails-sec .proInfo h3 {
+    font-size: 24px;
+  }
+  .siteTtlsm {
+    font-size: 28px;
+}
+  .productDetails-sec .proInfo p,
+  .productDetails-sec .proInfo ul li{
+    font-size: 14px;
+  }
+  .productDetails-sec .btnPanel a {
+    font-size: 14px;
+    padding: 10px 20px;
+}
+  .productDesc .nav-tabs .nav-item .nav-link {
+    font-size: 14px;
+    padding: 8px 26px;
+  }
+  .prodescText p{
+    font-size: 14px;
+  }
+
+  .stellarnav.light.right .menu-toggle{
+    font-size: 0;
+  }
+  body {
+    padding-top: 35px;
+  }
+  .header .headerwrap {
+    padding: 0 30px;
+  }
+  .header .headerwrap .logo {
+    max-width: 100px;
+  }
+ .header .headerwrap .rthd {
+    padding: 4px 0 0;
+  } 
+  .header .headerwrap .rthd .rqBtn a {
+    font-size: 10px;
+    padding: 8px 11px;
+    border-radius: 4px;
+  }
+  .banner .owl-stage-outer {
+    border-radius: 30px 30px 0 0;
+  }
+  .bannerInner{
+    border-radius: 30px;
+  }
+  .furniture-sec .common-slider {
+    border-radius: 0 0 30px 30px;
+  }
+  .rental-service-sec .rental-serviceWrap {
+    border-radius: 30px;
+  }
+  .banner .bnDesc .text {
+    max-width: 291px;
+  }
+  .banner .bnDesc .text h1 {
+    font-size: 24px;
+    margin: 0 0 10px;
+  }
+  .banner .bnDesc .text p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .banner .bnDesc .text a {
+    font-size: 12px;
+    padding: 12px 20px;
+    border-radius: 6px;
+  }
+  .banner .owl-dots {
+    bottom: 20px;
+  }
+  .furniture-sec .counterSec {
+    top: 0;
+    background: #1a0e04;
+    position: relative;
+    padding: 0;
+  }
+  .furniture-sec .counterBox {
+    padding: 10px;
+  }
+  .furniture-sec .counterBox ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .furniture-sec .counterBox ul li span, .furniture-sec .counterBox ul li h6 {
+    font-size: 24px;
+  }
+  .furniture-sec .counterBox ul li p {
+    font-size: 13px;
+    padding-top: 7px;
+  }
+  .furniture-sec .counterBox ul li {
+    width: calc(50% - 5px);
+    text-align: center;
+    border-right: 1px solid #fff;
+  }
+  .furniture-sec .counterBox ul li:nth-child(2) {
+    border-right: 0;
+  }
+
+
+  .productTab .nav-tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .productTab .nav-tabs .nav-item {
+    width: calc(50% - 5px);
+  }
+  .fsliderdesc {
+    padding: 0 15px 30px 0;
+  }
+  .fsliderdesc p {
+    font-size: 14px;
+    margin: 0 0 20px;
+  }
+  .allproduct-sec .ttl h2, .rental-service-sec .ttl h2, .project-sec .ttl h2 {
+    font-size: 30px;
+  }
+  .fsliderdesc a, .rental-serviceWrap .btn-sec a, .masonry .brick .brickBtn a {
+    font-size: 14px;
+    padding: 10px 26px;
+    border-radius: 6px;
+  }
+
+  .allproduct-sec .ttl p, .rental-service-sec .ttl p{
+    font-size: 14px;
+  }
+  .tabProBox .text p {
+    font-size: 14px;
+  }
+  .rental-serviceBox {
+    padding: 20px 20px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .rental-serviceWrap .btn-sec {
+    padding: 10px 0 0;
+  }
+  .blogBox .text .info {
+    padding: 10px;
+  }
+  .blogBox .text .info p {
+    font-size: 14px;
+  }
+  .testimonial-sec .testimonialBox {
+    padding: 32px 0;
+  }
+  .testimonial-sec .testimonialBox .test-iconTop {
+    left: 29px;
+  }
+  .testimonial-sec .testimonialBox .test-iconBottom {
+    right: 29px;
+  }
+  .testimonial-sec .testimonialBox .test-iconTop, .testimonial-sec .testimonialBox .test-iconBottom {
+    max-width: 100px;
+  }
+  .testimonialBoxWrap {
+    padding: 50px 15px;
+    border-radius: 30px;
+  }
+  .testimonialBoxWrap ul {
+    gap: 4px;
+    margin: 0 0 15px;
+  }
+  .testimonialBoxWrap ul li {
+    font-size: 16px;
+  }
+
+  .testimonialBoxWrap p {
+    font-size: 18px;
+    margin: 0 auto 30px;
+  }
+
+  .testimonialBoxWrap h4 {
+    font-size: 36px;
+  }
+  .testimonial-sec .owl-dots{
+    bottom: 47px;
+  }
+  .ftBoxWarp {
+    flex-wrap: wrap;
+    padding: 0 0px 0 0;
+    flex-direction: column;
+  }
+  .ftBoxWarp .ftBox {
+    padding: 0;
+    margin: 0 0 30px;
+  }
+  .footer .ftTtl {
+    font-size: 20px;
+    margin: 0 0 20px;
+  }
+  .copyrightSec {
+    flex-direction: column;
+    padding: 16px 0;
+    gap: 6px;
+  }
 }

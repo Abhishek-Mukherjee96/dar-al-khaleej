@@ -39,8 +39,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('add-faq-action', [AdminController::class, 'add_faq_action'])->name('add_faq_action');
     Route::get('edit-faq-action/{id}', [AdminController::class, 'edit_faq_action'])->name('edit_faq_action');
     Route::post('update-faq-action/{id}', [AdminController::class, 'update_faq_action'])->name('update_faq_action');
-    Route::get('update-status-faq-action/{id}', [AdminController::class, 'update_status_faq_action'])->name('update_status_faq_action');
     Route::get('delete-faq-action/{id}', [AdminController::class, 'delete_faq_action'])->name('delete_faq_action');
+
+    Route::get('blogs', [AdminController::class, 'blogs'])->name('blogs');
+    Route::get('add-blog', [AdminController::class, 'add_blog'])->name('add_blog');
+    Route::post('add-blog-action', [AdminController::class, 'add_blog_action'])->name('add_blog_action');
+    Route::get('edit-blog-action/{id}', [AdminController::class, 'edit_blog_action'])->name('edit_blog_action');
+    Route::post('update-blog-action/{id}', [AdminController::class, 'update_blog_action'])->name('update_blog_action');
+    Route::get('delete-blog-action/{id}', [AdminController::class, 'delete_blog_action'])->name('delete_blog_action');
 
     Route::get('why-choose-us-edit', [AdminController::class, 'why_choose_us_edit'])->name('why_choose_us_edit');
     Route::post('why-choose-us-edit-action', [AdminController::class, 'why_choose_us_edit_action'])->name('why_choose_us_edit_action');
@@ -51,6 +57,8 @@ Route::get('/about-us', [AboutController::class, 'about_us'])->name('about_us');
 Route::get('/contact-us', [ContactController::class, 'contact_us'])->name('contact_us');
 Route::get('/gallery', [ProductController::class, 'gallery'])->name('gallery');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('/blog/{slug}', [HomeController::class, 'blog_details'])->name('blog_details');
 Route::get('/why-choose-us', [HomeController::class, 'why_choose_us'])->name('why_choose_us');
 Route::post('/contact-us-action', [ContactController::class, 'contact_form_action'])->name('contact_form_action');
 Route::get('/products', [ProductController::class, 'products'])->name('products');
