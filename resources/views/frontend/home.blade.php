@@ -44,7 +44,7 @@
                     </li>
                     <li>
                         <h6><span class="count percent" data-count="10">0</span>k+</h6>
-                        <p>Happy Clints</p>
+                        <p>Happy Clients</p>
                     </li>
                     <li>
                         <h6><span class="count percent" data-count="260">0</span>+</h6>
@@ -314,54 +314,30 @@
                     <div class="fsliderdesc">
                         <h2>From Our Blog</h2>
                         <p>Insights, tips, and ideas on furniture rentals, interior styling, events, and majlis setups.</p>
-                        <a href="#">Explore More</a>
+                        <a href="{{route('blogs')}}">Explore More</a>
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
                     <div class="boxslider">
                         <div class="owl-carousel" id="blogSlider">
+                            @if(count($blogs) > 0)
+                            @foreach ($blogs as $blog)
                             <div class="item">
                                 <div class="blogBox">
                                     <div class="imgtham">
-                                        <img src="frontend/assets/images/blog-img1.png" alt="">
+                                        <img src="{{asset($blog->image)}}" alt="">
                                     </div>
                                     <div class="text">
                                         <div class="info">
-                                            <span>11 Nov 2025</span>
-                                            <p>Reasons to Rent Furniture Instead of Buying in the UAE</p>
+                                            <span>{{date('F d, Y', strtotime($blog->created_at))}}</span>
+                                            <p>{{$blog->title}}</p>
                                         </div>
-                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                                        <a href="{{route('blog_details', $blog->slug)}}"><i class="fa-solid fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="blogBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/blog-img2.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <div class="info">
-                                            <span>11 Nov 2025</span>
-                                            <p>How to Style Your Living Room with Premium Rental Furniture</p>
-                                        </div>
-                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="blogBox">
-                                    <div class="imgtham">
-                                        <img src="frontend/assets/images/blog-img2.png" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <div class="info">
-                                            <span>11 Nov 2025</span>
-                                            <p>Reasons to Rent Furniture Instead of Buying in the UAE</p>
-                                        </div>
-                                        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>

@@ -7,7 +7,7 @@
             <div class="desc">
                 <div class="container">
                     <div class="text">
-                        <h1>Blog details</h1>
+                        <h1>Blog Details</h1>
                     </div>
                 </div>
             </div>

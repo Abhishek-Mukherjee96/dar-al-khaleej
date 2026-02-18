@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    padding: 93px 0 0;
+    padding: 0 0 0;
     margin: 0;
     font-family: "Quicksand", sans-serif;
     /* overflow-x: hidden !important; */
@@ -39,23 +39,24 @@ img{
 
 
 .header {
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
-    position: absolute;
+    /* position: absolute; */
     z-index: 99;
-    top: 0;
+    /* top: 0; */
     width: 100%;
 }
 .header .headerwrap{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    align-items: center;
 }
 .header .headerwrap .rthd {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 34px 0 0;
+    padding: 0px 0 0;
 }
 .header .headerwrap .rthd  {
 
@@ -410,6 +411,9 @@ img{
     margin: 0;
     border: none;
     flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;    
 }
 .productTab .nav-tabs .nav-item{
     width: 100%;
@@ -430,6 +434,7 @@ img{
     text-align: center;
     transition: all 0.5s ease-in-out;
     width: 100%;
+    white-space: nowrap;
 }
 .productTab .nav-tabs .nav-item .nav-link:hover,
 .productTab .nav-tabs .nav-item .nav-link.active{
@@ -604,6 +609,8 @@ img{
   counter-increment: brick-counter;
   position: relative;
   margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .masonry .brick .brickBtn{
     position: absolute;
@@ -805,7 +812,7 @@ img{
     display: inline-block;
     transition: all 0.5s ease-in-out;
     padding: 16px 15px;
-    border-radius: 0px;
+    border-radius: 10px;
     width: 100%;
 }
 .newsletterBox .btnBox .btn:hover{
@@ -902,17 +909,19 @@ img{
 }
 .ourBlog-sec .fsliderdesc a{
     background: #B88E2F;
-    border-radius: 0;
 }
 .ourBlog-sec .fsliderdesc a:hover{
     background: #1D364D;
 }
 .blogBox{
     position: relative;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .blogBox .imgtham{
     position: relative;
     overflow: hidden;
+    height: 100%;
 }
 .blogBox .imgtham img{
     width: 100%;
@@ -2059,3 +2068,10 @@ padding-left: 0;
 
 
 
+.boxslider .owl-carousel .owl-stage{display: flex;}
+.boxslider .owl-carousel .item{
+    display: flex;
+    flex: 1 0 auto;
+    height: 100%;
+    width: 100%;
+}

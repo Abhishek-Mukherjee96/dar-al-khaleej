@@ -63,7 +63,7 @@
                                 <img src="frontend/assets/images/phone-icon.png" alt="">
                             </div>
                             <div class="text">
-                                <a href="tel:+971 50 123 4567">+971 50 123 4567</a>
+                                <a href="tel:+971543573734">+971543573734</a>
                             </div>
                         </div>
                         <div class="conBox">

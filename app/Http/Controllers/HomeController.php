@@ -15,7 +15,8 @@ class HomeController extends Controller
     {
         $categories = Category::where('status', 1)->get();
         $products = Product::where('status', 1)->get();
-        return view('frontend.home',compact('categories', 'products'));
+        $blogs = Blog::where('status', 1)->latest()->get();
+        return view('frontend.home',compact('categories', 'products', 'blogs'));
     }
 
     public function faq(){
