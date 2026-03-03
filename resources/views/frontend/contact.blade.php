@@ -25,7 +25,7 @@
                         </div>
                         <div class="contact-info-text">
                             <h2>address</h2>
-                            <span>Dubai, United Arab Emirates Al Quoz Industrial Area 3, Warehouse 12</span>
+                            <span>Media City, Sharjah, UAE</span>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="contact-info-text">
                             <h2>E-mail</h2>
-                            <a href="mailto:support@darkhaleej.com"><span>support@darkhaleej.com</span></a>
+                            <a href="mailto:daralkhaleejfurniture@gmail.com"><span>daralkhaleejfurniture@gmail.com</span></a>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                         </div>
                         <div class="contact-info-text">
                             <h2>Phone Number</h2>
-                            <a href="tel:+971 50 123 4567"><span>+971 50 123 4567</span></a>
+                            <a href="tel:+971543573734"><span>+971543573734</span></a>
                         </div>
                     </div>
                 </div>

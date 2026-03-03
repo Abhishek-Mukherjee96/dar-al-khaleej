@@ -50,6 +50,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('why-choose-us-edit', [AdminController::class, 'why_choose_us_edit'])->name('why_choose_us_edit');
     Route::post('why-choose-us-edit-action', [AdminController::class, 'why_choose_us_edit_action'])->name('why_choose_us_edit_action');
+
+    Route::get('enquiry', [AdminController::class, 'enquiry_list'])->name('enquiry_list');
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('index');

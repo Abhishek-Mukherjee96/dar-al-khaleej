@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-lg-5 col-md-5 col-sm-12">
                     <div class="proTham">
-                        <img src="{{ Storage::url($product->thumbnail) }}" alt="{{ $product->product_name }}">
+                        <img src="{{ asset('storage/app/public/'.$product->thumbnail) }}" alt="{{ $product->product_name }}">
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-12">
@@ -35,9 +35,20 @@
                             <li><strong>Condition:</strong> {{ $product->conditions ?? 'N/A' }}</li>
                         </ul>
                         @php
+                        $rawPhone = config('app.whatsapp');
+                        $phone = preg_replace('/[^0-9]/', '', $rawPhone);
+
                         $message = "Hi, I'm interested in this product:\n\n"
-                        . "Product: {$product->product_name}\n"
-                        . "Link: " . url()->current();
+                            . "Product: {$product->product_name}\n"
+                            . "Link: " . url()->current();
+
+                        $userAgent = request()->header('User-Agent');
+
+                        $isMobile = preg_match('/Android|iPhone|iPad|iPod/i', $userAgent);
+
+                        $whatsappUrl = $isMobile
+                            ? "https://wa.me/$phone?text=" . rawurlencode($message)
+                            : "https://web.whatsapp.com/send?phone=$phone&text=" . rawurlencode($message);
                         @endphp
 
                         <div class="btnPanel">
@@ -52,8 +63,9 @@
                                 Enquire Now
                             </a>
                             <a target="_blank"
-                                href="https://api.whatsapp.com/send?text={{ rawurlencode($message) }}">
-                                WhatsApp
+                               href="{{ $whatsappUrl }}"
+                               class="btn btn-success">
+                               WhatsApp
                             </a>
                         </div>
                     </div>
@@ -62,37 +74,44 @@
             <div class="productDesc">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#description"
-                            type="button" role="tab" aria-controls="description" aria-selected="true">
+                        <button class="nav-link active"
+                            data-bs-toggle="tab"
+                            data-bs-target="#description"
+                            type="button">
                             Description
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" id="spec-tab" data-bs-toggle="tab" data-bs-target="#specification"
-                            type="button" role="tab" aria-controls="specification" aria-selected="false">
+                        <button class="nav-link"
+                            data-bs-toggle="tab"
+                            data-bs-target="#specification"
+                            type="button">
                             Specification
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" id="feat-tab" data-bs-toggle="tab" data-bs-target="#features"
-                            type="button" role="tab" aria-controls="features" aria-selected="false">
+                        <button class="nav-link"
+                            data-bs-toggle="tab"
+                            data-bs-target="#features"
+                            type="button">
                             Key Features
                         </button>
                     </li>
                 </ul>
 
                 <div class="tab-content mt-3">
-                    <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="desc-tab">
+                    <div class="tab-pane fade show active" id="description">
                         {!! $product->description !!}
                     </div>
-                    <div class="tab-pane fade" id="specification" role="tabpanel" aria-labelledby="spec-tab">
+
+                    <div class="tab-pane fade" id="specification">
                         {!! $product->specifications !!}
                     </div>
-                    <div class="tab-pane fade" id="features" role="tabpanel" aria-labelledby="feat-tab">
+
+                    <div class="tab-pane fade" id="features">
                         {!! $product->key_features !!}
                     </div>
                 </div>
-
             </div>
 
         </div>
@@ -110,7 +129,7 @@
                     <a href="{{ route('product_details', $related->slug) }}">
                         <div class="tabProBox">
                             <div class="imgtham">
-                                <img src="{{ Storage::url($related->thumbnail) }}" alt="{{ $related->product_name }}">
+                                <img src="{{ asset('storage/app/public/'.$related->thumbnail) }}" alt="{{ $related->product_name }}">
                             </div>
                             <div class="text">
                                 <p>{{ $related->product_name }}</p>
@@ -122,8 +141,9 @@
             </div>
         </div>
     </div>
+    @endif
     <div class="modal fade" id="enquiryModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <form method="POST" action="{{ route('product_enquiry') }}">
                     @csrf
@@ -133,27 +153,6 @@
                     </div>
                     <div class="modal-body">
                         <input type="hidden" name="product_id" id="product_id">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label>Rental Duration</label>
-                                <select name="rental_duration" class="form-control" id="rental_duration" required>
-                                    <option value="">Select</option>
-                                    <option value="Daily">Daily</option>
-                                    <option value="Weekly">Weekly</option>
-                                    <option value="Monthly">Monthly</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-                                <label>Available For</label>
-                                <select name="available_for" class="form-control" id="available_for" required>
-                                    <option value="">Select</option>
-                                    <option value="Home">Home</option>
-                                    <option value="Office">Office</option>
-                                    <option value="Event">Event</option>
-                                </select>
-                            </div>
-                        </div>
                         <div class="mb-3">
                             <label>Name</label>
                             <input type="text" class="form-control" name="name" required>
@@ -179,7 +178,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label>Message</label>
+                            <label>Requirements</label>
                             <textarea class="form-control" name="message"></textarea>
                         </div>
 
@@ -194,7 +193,6 @@
             </div>
         </div>
     </div>
-    @endif
     @endsection
     @section('scripts')
     <script>

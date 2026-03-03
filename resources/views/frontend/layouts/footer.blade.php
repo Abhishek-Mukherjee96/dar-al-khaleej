@@ -52,27 +52,27 @@
                         <h3 class="ftTtl">Contact Info</h3>
                         <div class="conBox">
                             <div class="icon">
-                                <img src="frontend/assets/images/mail-icon.png" alt="">
+                                <img src="{{asset('frontend/assets/images/mail-icon.png')}}" alt="">
                             </div>
                             <div class="text">
-                                <a href="mailto:support@darkhaleej.com">support@darkhaleej.com</a>
+                                <a href="mailto:daralkhaleejfurniture@gmail.com">daralkhaleejfurniture@gmail.com</a>
                             </div>
                         </div>
                         <div class="conBox">
                             <div class="icon">
-                                <img src="frontend/assets/images/phone-icon.png" alt="">
+                                <img src="{{asset('frontend/assets/images/phone-icon.png')}}" alt="">
                             </div>
                             <div class="text">
-                                <a href="tel:+971543573734">+971543573734</a>
+                                <a href="tel:+971543573734">+971 54 357 3734</a>
                             </div>
                         </div>
                         <div class="conBox">
                             <div class="icon">
-                                <img src="frontend/assets/images/address-icon.png" alt="">
+                                <img src="{{asset('frontend/assets/images/address-icon.png')}}" alt="">
                             </div>
                             <div class="text">
-                                <p>Dubai, United Arab Emirates</p>
-                                <span>Al Quoz Industrial Area 3, Warehouse 12</span>
+                                <p>Sharjah Media City, UAE</p>
+                                <span></span>
                             </div>
                         </div>
                     </div>

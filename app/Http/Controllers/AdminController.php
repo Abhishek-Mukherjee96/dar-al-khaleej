@@ -6,6 +6,7 @@ use App\Models\AboutUs;
 use App\Models\Blog;
 use App\Models\ContactUs;
 use App\Models\Faq;
+use App\Models\ProductEnquiry;
 use App\Models\WhyChooseUs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -253,5 +254,11 @@ class AdminController extends Controller
         $blog->delete();
 
         return redirect()->route('blogs')->with('success', 'Blog deleted successfully');
+    }
+
+    public function enquiry_list()
+    {
+        $enquiries = ProductEnquiry::leftjoin('products', 'product_enquiries.product_id', '=', 'products.product_id')->select('product_enquiries.*', 'products.product_name')->paginate(25);
+        return view('admin.product.enquiry', compact('enquiries'));
     }
 }

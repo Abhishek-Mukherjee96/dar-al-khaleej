@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Faq;
 use App\Models\Product;
 use App\Models\WhyChooseUs;
+use App\Models\AboutUs;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,30 +17,35 @@ class HomeController extends Controller
         $categories = Category::where('status', 1)->get();
         $products = Product::where('status', 1)->get();
         $blogs = Blog::where('status', 1)->latest()->get();
-        return view('frontend.home',compact('categories', 'products', 'blogs'));
+        $about = AboutUs::first();
+
+        return view('frontend.home', compact('categories', 'products', 'blogs', 'about'));
     }
 
-    public function faq(){
-        $faqs = Faq::where('status',1)->get();
+    public function faq()
+    {
+        $faqs = Faq::where('status', 1)->get();
         return view('frontend.faq', compact('faqs'));
     }
-    public function why_choose_us(){
+    public function why_choose_us()
+    {
         $why_choose = WhyChooseUs::first();
-        return view('frontend.why_choose_us',compact('why_choose'));
+        return view('frontend.why_choose_us', compact('why_choose'));
     }
 
-    public function blog(){
+    public function blog()
+    {
         $blogs = Blog::where('status', 1)->latest()->get();
-        return view('frontend.blog',compact('blogs'));
+        return view('frontend.blog', compact('blogs'));
     }
 
     public function blog_details($slug)
     {
         $recent_blogs = Blog::where('status', 1)->where('slug', '!=', $slug)->latest()->limit(5)->get();
         $blog = Blog::where('slug', $slug)
-                    ->where('status', 1)
-                    ->firstOrFail();
+            ->where('status', 1)
+            ->firstOrFail();
 
-        return view('frontend.blog_details', compact('blog','recent_blogs'));
+        return view('frontend.blog_details', compact('blog', 'recent_blogs'));
     }
 }

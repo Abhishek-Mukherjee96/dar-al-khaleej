@@ -8,9 +8,9 @@
             <div class="bnDesc">
                 <div class="cus-container">
                     <div class="text">
-                        <h1>Luxury Furniture Rentals for Homes & Events Across the Gulf</h1>
-                        <p>Premium furniture delivered and installed with flexible monthly plans for convenience.</p>
-                        <a href="#">Browse Furniture</a>
+                        <h1>Transforming Empty Spaces into Impactful Experiences.</h1>
+                        <p>From exhibitions and trade shows to corporate meetings and VIP lounges, Dar Al Khaleej provides stylish, functional, and reliable furniture rental solutions across the UAE.</p>
+                        <a href="{{route('products')}}">Browse Furniture</a>
                     </div>
                 </div>
             </div>
@@ -20,9 +20,9 @@
             <div class="bnDesc">
                 <div class="cus-container">
                     <div class="text">
-                        <h1>Luxury Furniture Rentals for Homes & Events Across the Gulf</h1>
-                        <p>Premium furniture delivered and installed with flexible monthly plans for convenience.</p>
-                        <a href="#">Browse Furniture</a>
+                        <h1>Elevate Your Space — Rent Premium Furniture in the UAE With Zero Hassle.</h1>
+                        <p>Style, Comfort & Convenience Delivered to Your Doorstep — Browse Our Collection Now!</p>
+                        <a href="{{route('products')}}">Browse Furniture</a>
                     </div>
                 </div>
             </div>
@@ -35,19 +35,19 @@
             <div class="counterBox">
                 <ul id="counter">
                     <li>
-                        <h6><span class="count percent" data-count="7">0</span></h6>
-                        <p>Year Experience</p>
+                        <h6><span class="count percent" data-count="5">0</span>+</h6>
+                        <p>Years of Experience</p>
                     </li>
                     <li>
                         <h6><span class="count percent" data-count="2">0</span></h6>
                         <p>Opened in the country</p>
                     </li>
                     <li>
-                        <h6><span class="count percent" data-count="10">0</span>k+</h6>
+                        <h6><span class="count percent" data-count="100">0</span>+</h6>
                         <p>Happy Clients</p>
                     </li>
                     <li>
-                        <h6><span class="count percent" data-count="260">0</span>+</h6>
+                        <h6><span class="count percent" data-count="100">0</span>+</h6>
                         <p>Variant Furniture</p>
                     </li>
                 </ul>
@@ -59,8 +59,8 @@
             <div class="row g-0 align-items-center">
                 <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
                     <div class="fsliderdesc">
-                        <h2>Browse Furniture Rentals</h2>
-                        <p>Premium furniture rentals for homes, offices, and events — delivered and set up for you.</p>
+                        <h2>Browse Our Furnitures</h2>
+                        <p> Explore our premium range of event-ready furniture designed to enhance comfort, aesthetics, and functionality.</p>
                         <a href="{{route('products')}}">View All</a>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                             <div class="item">
                                 <div class="furnitureBox">
                                     <div class="imgtham">
-                                        <img src="{{ Storage::url($product->thumbnail) }}" alt="">
+                                        <img src="{{ asset('storage/app/public/'.$product->thumbnail) }}" alt="">
                                     </div>
                                     <div class="text">
                                         <p>{{$product->product_name}}</p>
@@ -87,11 +87,31 @@
         </div>
     </div>
 </div>
+<section class="aboutSec">
+    <div class="cus-container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="aboutImg">
+                    <img src="{{$about->about_img}}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="textBox">
+                    <h2 class="siteTtl">{{$about->about_heading}}</h2>
+                    <p class="sitePara">Dar Al Khaleej Furniture Rentals is a UAE-based event furniture rental company specializing in premium, modern, and functional furniture for exhibitions, corporate events, conferences, and trade shows. We combine quality products, fast logistics, and professional installation to ensure your event space looks impressive and operates seamlessly.</p>
+                    <div class="fsliderdesc">
+                        <a href="{{route('about_us')}}">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="allproduct-sec">
     <div class="cus-container">
         <div class="ttl">
-            <h2>All Product</h2>
-            <p>The products we provide only for you as our service are selected from the best products with number 1 quality in the world</p>
+            <h2>All Products</h2>
+            <p> Discover our complete catalog of modern rental furniture for exhibitions, corporate events, and trade shows.</p>
         </div>
         <div class="productTab">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -137,29 +157,43 @@
     <div class="rental-serviceWrap">
         <div class="cus-container">
             <div class="ttl">
-                <h2>How Our Rental Service Works</h2>
-                <p>Simple, fast, and hassle-free furniture rental for homes, offices, and events.</p>
+                <h2>How Rental Service Works At DAR AL KHALEEJ</h2>
+                <p>Our streamlined rental process ensures fast booking, timely delivery, and stress-free event execution.</p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="rental-serviceBox">
-                        <h4>Choose Your Furniture</h4>
+                        <h4>Browse & Select</h4>
                         <h2>01</h2>
-                        <p>Browse our collections and pick the items or setups you need. We offer home, office, event, and majlis rentals.</p>
+                        <p>Choose the furniture items you need from our product catalog based on your event requirements.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="rental-serviceBox">
-                        <h4>Select Your Rental Duration</h4>
+                        <h4>Request a Quote</h4>
                         <h2>02</h2>
-                        <p>Choose flexible rental terms — daily, weekly, or monthly depending on your needs. No long-term commitments.</p>
+                        <p>Share your event details, quantities, and dates — we provide a transparent and competitive quotation.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="rental-serviceBox">
-                        <h4>Delivery, Setup & Pickup</h4>
+                        <h4>Confirmation & Scheduling</h4>
                         <h2>03</h2>
-                        <p>Our team delivers, installs, and arranges everything for you. When your rental period ends, we collect it at your convenience.</p>
+                        <p>Once approved, we schedule delivery and coordinate logistics according to your event timeline.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
+                    <div class="rental-serviceBox">
+                        <h4>Delivery & Installation</h4>
+                        <h2>04</h2>
+                        <p>Our professional team delivers and installs the furniture at your venue.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
+                    <div class="rental-serviceBox">
+                        <h4>Event Support & Pickup</h4>
+                        <h2>05</h2>
+                        <p>After your event concludes, we handle dismantling and pickup efficiently.</p>
                     </div>
                 </div>
             </div>
@@ -173,7 +207,7 @@
     <div class="cus-container">
         <div class="ttl">
             <h2>Our Projects</h2>
-            <p>A showcase of premium furniture rentals delivered and installed for homes, offices, events, and majlis setups across the Gulf.</p>
+            <p>Reliable service, premium quality, and seamless execution — every single time.</p>
         </div>
     </div>
     <div class="masonry">
@@ -254,8 +288,8 @@
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                     </ul>
-                    <p>Absolutely outstanding service! The team delivered, installed, and set up every piece with perfection. My entire living room was transformed into a luxurious space within hours. I highly recommend DAR AL KHALEEJ to anyone looking for top-quality premium rental furniture.</p>
-                    <h4>Andrés R</h4>
+                    <p>Dar Al Khaleej delivered premium furniture on time for our exhibition stand — their service was seamless and professional.</p>
+                    <h4>Ahmed Al Mansoori</h4>
                 </div>
                 <div class="test-iconBottom">
                     <img src="frontend/assets/images/testi-bottom-icon.png" alt="">
@@ -275,8 +309,8 @@
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                     </ul>
-                    <p>Absolutely outstanding service! The team delivered, installed, and set up every piece with perfection. My entire living room was transformed into a luxurious space within hours. I highly recommend DAR AL KHALEEJ to anyone looking for top-quality premium rental furniture.</p>
-                    <h4>Andrés R</h4>
+                    <p>The quality of the sofas and meeting tables exceeded our expectations. Highly recommended for corporate events.</p>
+                    <h4>Fatima Rashid</h4>
                 </div>
                 <div class="test-iconBottom">
                     <img src="frontend/assets/images/testi-bottom-icon.png" alt="">
@@ -296,8 +330,8 @@
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                     </ul>
-                    <p>Absolutely outstanding service! The team delivered, installed, and set up every piece with perfection. My entire living room was transformed into a luxurious space within hours. I highly recommend DAR AL KHALEEJ to anyone looking for top-quality premium rental furniture.</p>
-                    <h4>Andrés R</h4>
+                    <p>Excellent coordination, clean furniture, and smooth installation. They made our event setup stress-free.</p>
+                    <h4>Khalid Nasser</h4>
                 </div>
                 <div class="test-iconBottom">
                     <img src="frontend/assets/images/testi-bottom-icon.png" alt="">
@@ -312,9 +346,9 @@
             <div class="row g-0 align-items-center">
                 <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
                     <div class="fsliderdesc">
-                        <h2>From Our Blog</h2>
-                        <p>Insights, tips, and ideas on furniture rentals, interior styling, events, and majlis setups.</p>
-                        <a href="{{route('blogs')}}">Explore More</a>
+                        <h2>Our Blogs</h2>
+                        <p>Insights, event tips, and industry trends to help you create unforgettable event experiences.</p>
+                        <a href="{{route('blog')}}">Explore More</a>
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">

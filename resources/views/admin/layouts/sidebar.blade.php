@@ -138,6 +138,17 @@
                     </a>
                 </li>
                 <li>
+                    <a class="nav-link {{ request()->is('enquiry') ? 'active' : '' }} ? 'active' : '' }}"
+                        href="{{ route('enquiry_list') }}" role="button">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon">
+                                <span class="bi-bag"></span>
+                            </span>
+                            <span class="nav-link-text ps-1">Product Enquiries</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
                     <a class="nav-link {{ request()->is('contacts') ? 'active' : '' }} ? 'active' : '' }}"
                         href="{{ route('contact_list') }}" role="button">
                         <div class="d-flex align-items-center">
